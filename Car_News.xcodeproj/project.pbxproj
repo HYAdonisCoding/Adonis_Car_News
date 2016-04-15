@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBEB33E51CC10E8A0023EE66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEB33E41CC10E8A0023EE66 /* main.m */; };
+		BBEB33E81CC10E8A0023EE66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEB33E71CC10E8A0023EE66 /* AppDelegate.m */; };
+		BBEB33EB1CC10E8A0023EE66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEB33EA1CC10E8A0023EE66 /* ViewController.m */; };
+		BBEB33EE1CC10E8A0023EE66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBEB33EC1CC10E8A0023EE66 /* Main.storyboard */; };
+		BBEB33F01CC10E8A0023EE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBEB33EF1CC10E8A0023EE66 /* Assets.xcassets */; };
+		BBEB33F31CC10E8A0023EE66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBEB33F11CC10E8A0023EE66 /* LaunchScreen.storyboard */; };
+		BBEB33FE1CC10E8A0023EE66 /* Car_NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEB33FD1CC10E8A0023EE66 /* Car_NewsTests.m */; };
+		BBEB34091CC10E8A0023EE66 /* Car_NewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEB34081CC10E8A0023EE66 /* Car_NewsUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBEB33FA1CC10E8A0023EE66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBEB33D81CC10E890023EE66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBEB33DF1CC10E890023EE66;
+			remoteInfo = Car_News;
+		};
+		BBEB34051CC10E8A0023EE66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBEB33D81CC10E890023EE66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBEB33DF1CC10E890023EE66;
+			remoteInfo = Car_News;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BBEB33E01CC10E890023EE66 /* Car_News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Car_News.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBEB33E41CC10E8A0023EE66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BBEB33E61CC10E8A0023EE66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BBEB33E71CC10E8A0023EE66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BBEB33E91CC10E8A0023EE66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BBEB33EA1CC10E8A0023EE66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BBEB33ED1CC10E8A0023EE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBEB33EF1CC10E8A0023EE66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBEB33F21CC10E8A0023EE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BBEB33F41CC10E8A0023EE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBEB33F91CC10E8A0023EE66 /* Car_NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Car_NewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBEB33FD1CC10E8A0023EE66 /* Car_NewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car_NewsTests.m; sourceTree = "<group>"; };
+		BBEB33FF1CC10E8A0023EE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBEB34041CC10E8A0023EE66 /* Car_NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Car_NewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBEB34081CC10E8A0023EE66 /* Car_NewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car_NewsUITests.m; sourceTree = "<group>"; };
+		BBEB340A1CC10E8A0023EE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBEB33DD1CC10E890023EE66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBEB33F61CC10E8A0023EE66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBEB34011CC10E8A0023EE66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBEB33D71CC10E890023EE66 = {
+			isa = PBXGroup;
+			children = (
+				BBEB33E21CC10E890023EE66 /* Car_News */,
+				BBEB33FC1CC10E8A0023EE66 /* Car_NewsTests */,
+				BBEB34071CC10E8A0023EE66 /* Car_NewsUITests */,
+				BBEB33E11CC10E890023EE66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBEB33E11CC10E890023EE66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBEB33E01CC10E890023EE66 /* Car_News.app */,
+				BBEB33F91CC10E8A0023EE66 /* Car_NewsTests.xctest */,
+				BBEB34041CC10E8A0023EE66 /* Car_NewsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBEB33E21CC10E890023EE66 /* Car_News */ = {
+			isa = PBXGroup;
+			children = (
+				BBEB33E61CC10E8A0023EE66 /* AppDelegate.h */,
+				BBEB33E71CC10E8A0023EE66 /* AppDelegate.m */,
+				BBEB33E91CC10E8A0023EE66 /* ViewController.h */,
+				BBEB33EA1CC10E8A0023EE66 /* ViewController.m */,
+				BBEB33EC1CC10E8A0023EE66 /* Main.storyboard */,
+				BBEB33EF1CC10E8A0023EE66 /* Assets.xcassets */,
+				BBEB33F11CC10E8A0023EE66 /* LaunchScreen.storyboard */,
+				BBEB33F41CC10E8A0023EE66 /* Info.plist */,
+				BBEB33E31CC10E8A0023EE66 /* Supporting Files */,
+			);
+			path = Car_News;
+			sourceTree = "<group>";
+		};
+		BBEB33E31CC10E8A0023EE66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBEB33E41CC10E8A0023EE66 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBEB33FC1CC10E8A0023EE66 /* Car_NewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBEB33FD1CC10E8A0023EE66 /* Car_NewsTests.m */,
+				BBEB33FF1CC10E8A0023EE66 /* Info.plist */,
+			);
+			path = Car_NewsTests;
+			sourceTree = "<group>";
+		};
+		BBEB34071CC10E8A0023EE66 /* Car_NewsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BBEB34081CC10E8A0023EE66 /* Car_NewsUITests.m */,
+				BBEB340A1CC10E8A0023EE66 /* Info.plist */,
+			);
+			path = Car_NewsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBEB33DF1CC10E890023EE66 /* Car_News */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBEB340D1CC10E8A0023EE66 /* Build configuration list for PBXNativeTarget "Car_News" */;
+			buildPhases = (
+				BBEB33DC1CC10E890023EE66 /* Sources */,
+				BBEB33DD1CC10E890023EE66 /* Frameworks */,
+				BBEB33DE1CC10E890023EE66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Car_News;
+			productName = Car_News;
+			productReference = BBEB33E01CC10E890023EE66 /* Car_News.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBEB33F81CC10E8A0023EE66 /* Car_NewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBEB34101CC10E8A0023EE66 /* Build configuration list for PBXNativeTarget "Car_NewsTests" */;
+			buildPhases = (
+				BBEB33F51CC10E8A0023EE66 /* Sources */,
+				BBEB33F61CC10E8A0023EE66 /* Frameworks */,
+				BBEB33F71CC10E8A0023EE66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBEB33FB1CC10E8A0023EE66 /* PBXTargetDependency */,
+			);
+			name = Car_NewsTests;
+			productName = Car_NewsTests;
+			productReference = BBEB33F91CC10E8A0023EE66 /* Car_NewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBEB34031CC10E8A0023EE66 /* Car_NewsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBEB34131CC10E8A0023EE66 /* Build configuration list for PBXNativeTarget "Car_NewsUITests" */;
+			buildPhases = (
+				BBEB34001CC10E8A0023EE66 /* Sources */,
+				BBEB34011CC10E8A0023EE66 /* Frameworks */,
+				BBEB34021CC10E8A0023EE66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBEB34061CC10E8A0023EE66 /* PBXTargetDependency */,
+			);
+			name = Car_NewsUITests;
+			productName = Car_NewsUITests;
+			productReference = BBEB34041CC10E8A0023EE66 /* Car_NewsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBEB33D81CC10E890023EE66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = caohongyang;
+				TargetAttributes = {
+					BBEB33DF1CC10E890023EE66 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = N2KQ965WEJ;
+					};
+					BBEB33F81CC10E8A0023EE66 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = N2KQ965WEJ;
+						TestTargetID = BBEB33DF1CC10E890023EE66;
+					};
+					BBEB34031CC10E8A0023EE66 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = N2KQ965WEJ;
+						TestTargetID = BBEB33DF1CC10E890023EE66;
+					};
+				};
+			};
+			buildConfigurationList = BBEB33DB1CC10E890023EE66 /* Build configuration list for PBXProject "Car_News" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBEB33D71CC10E890023EE66;
+			productRefGroup = BBEB33E11CC10E890023EE66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBEB33DF1CC10E890023EE66 /* Car_News */,
+				BBEB33F81CC10E8A0023EE66 /* Car_NewsTests */,
+				BBEB34031CC10E8A0023EE66 /* Car_NewsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBEB33DE1CC10E890023EE66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEB33F31CC10E8A0023EE66 /* LaunchScreen.storyboard in Resources */,
+				BBEB33F01CC10E8A0023EE66 /* Assets.xcassets in Resources */,
+				BBEB33EE1CC10E8A0023EE66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBEB33F71CC10E8A0023EE66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBEB34021CC10E8A0023EE66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBEB33DC1CC10E890023EE66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEB33EB1CC10E8A0023EE66 /* ViewController.m in Sources */,
+				BBEB33E81CC10E8A0023EE66 /* AppDelegate.m in Sources */,
+				BBEB33E51CC10E8A0023EE66 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBEB33F51CC10E8A0023EE66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEB33FE1CC10E8A0023EE66 /* Car_NewsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBEB34001CC10E8A0023EE66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEB34091CC10E8A0023EE66 /* Car_NewsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBEB33FB1CC10E8A0023EE66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBEB33DF1CC10E890023EE66 /* Car_News */;
+			targetProxy = BBEB33FA1CC10E8A0023EE66 /* PBXContainerItemProxy */;
+		};
+		BBEB34061CC10E8A0023EE66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBEB33DF1CC10E890023EE66 /* Car_News */;
+			targetProxy = BBEB34051CC10E8A0023EE66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBEB33EC1CC10E8A0023EE66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBEB33ED1CC10E8A0023EE66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BBEB33F11CC10E8A0023EE66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBEB33F21CC10E8A0023EE66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBEB340B1CC10E8A0023EE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BBEB340C1CC10E8A0023EE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBEB340E1CC10E8A0023EE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Car_News/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tarena.com.Car-News";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BBEB340F1CC10E8A0023EE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Car_News/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tarena.com.Car-News";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BBEB34111CC10E8A0023EE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Car_NewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tarena.com.Car-NewsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Car_News.app/Car_News";
+			};
+			name = Debug;
+		};
+		BBEB34121CC10E8A0023EE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Car_NewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tarena.com.Car-NewsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Car_News.app/Car_News";
+			};
+			name = Release;
+		};
+		BBEB34141CC10E8A0023EE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Car_NewsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tarena.com.Car-NewsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Car_News;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BBEB34151CC10E8A0023EE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Car_NewsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tarena.com.Car-NewsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Car_News;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBEB33DB1CC10E890023EE66 /* Build configuration list for PBXProject "Car_News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBEB340B1CC10E8A0023EE66 /* Debug */,
+				BBEB340C1CC10E8A0023EE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBEB340D1CC10E8A0023EE66 /* Build configuration list for PBXNativeTarget "Car_News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBEB340E1CC10E8A0023EE66 /* Debug */,
+				BBEB340F1CC10E8A0023EE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BBEB34101CC10E8A0023EE66 /* Build configuration list for PBXNativeTarget "Car_NewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBEB34111CC10E8A0023EE66 /* Debug */,
+				BBEB34121CC10E8A0023EE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BBEB34131CC10E8A0023EE66 /* Build configuration list for PBXNativeTarget "Car_NewsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBEB34141CC10E8A0023EE66 /* Debug */,
+				BBEB34151CC10E8A0023EE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBEB33D81CC10E890023EE66 /* Project object */;
+}
