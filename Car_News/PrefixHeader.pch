@@ -1,0 +1,60 @@
+//
+//  PrefixHeader.pch
+//  AutoNews
+//
+//  Created by caohongyang on 16/4/1.
+//  Copyright © 2016年 caohongyang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import <AFNetworking.h>
+#import <UIKit+AFNetworking.h>
+#import <Masonry.h>
+/** masonry中拷贝的 */
+#define equalTo(...)                     mas_equalTo(__VA_ARGS__)
+#define greaterThanOrEqualTo(...)        mas_greaterThanOrEqualTo(__VA_ARGS__)
+#define lessThanOrEqualTo(...)           mas_lessThanOrEqualTo(__VA_ARGS__)
+
+#define offset(...)                      mas_offset(__VA_ARGS__)
+
+#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
+#import <YYKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+
+#import "UIView+HUD.h"
+#import "UIScrollView+Refresh.h"
+#import "NSObject+Networking.h"
+#import "NSObject+Parse.h"
+
+#import "Constants.h"
+/** 请求模式 */
+typedef NS_ENUM(NSUInteger, RequestMode) {\
+    RequestModeRefresh,\
+    RequestModeMore,\
+};
+
+
+/** 通信模块 */
+/** 主机名 */
+#define ANXMPPHOSTNAME @"127.0.0.1"
+/** opernfire的域名 */
+#define ANXMPPDOMAIN @"tedu.cn"
+/** 服务器端口号 */
+#define ANXMPPPOST 5222
+/** 开启/关闭控制台输出 */
+#ifdef DEBUG
+#define MYLog(...) NSLog(__VA_ARGS__)
+#else
+#define MYLog(...)
+#endif
+
+#import <WMPageController.h>
+
+
+#endif /* PrefixHeader_pch */

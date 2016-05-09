@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+//#import "AppDelegate+CNLocation.h"
+#import "AppDelegate+System.h"
 
 @interface AppDelegate ()
 
@@ -16,30 +18,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+     [self configGlovalUI];
+    //调用分类中的方法
+//    [self setupLocation];   
     return YES;
 }
+//对UI进行统一配置
+- (void)configGlovalUI {
+    //设置tabBar 的颜色
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+//    self.window.tintColor = kRGBColor(41, 42, 45, 1.0);
+    //设置导航栏背景色
+    [[UINavigationBar appearance] setBarTintColor: kRGBColor(31, 34, 45, 1.0)];
+    //设置导航栏的分割(黑色) 电池条自动变白
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
+    //配置导航栏文字颜色
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    
+    //配置导航栏标题文字样式
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:20]}];
+    
+    
 }
 
 @end
