@@ -19,10 +19,11 @@
     }
     return _dataList;
 }
-- (void)getDetailTalkAboutCarWithNewsListlistModel:(NewsListListModel *)model completionHandler:(void (^)(NSError *))completoinHandler {
+- (void)getDetailTalkAboutCarWithNewsListlistModel:(NewsListDataListModel *)model completionHandler:(void (^)(NSError *))completoinHandler {
     [CNNetManager getDetailTalkAboutCarWithNewsID:model.newsId lastModify: model.lastModify completionHandler:^(CNDetailTalkAboutModel *model, NSError *error) {
         if (!error) {
            [self.dataList addObjectsFromArray: model.data.content];
+           //MYLog(@"%@",model.data.content);
         }
         completoinHandler(error);
     }];

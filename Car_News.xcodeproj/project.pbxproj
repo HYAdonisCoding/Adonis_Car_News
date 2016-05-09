@@ -26,6 +26,10 @@
 		BB5B80AB1CD1F5800066B46D /* CNCarSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5B80AA1CD1F5800066B46D /* CNCarSearchTableViewController.m */; };
 		BB5B80B11CD22E8E0066B46D /* CNHotSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5B80B01CD22E8E0066B46D /* CNHotSearchModel.m */; };
 		BB5B80B61CD23E390066B46D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5B80B51CD23E390066B46D /* MediaPlayer.framework */; };
+		BB67CAD01CE0B0500042FD95 /* CNCarVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB67CACF1CE0B0500042FD95 /* CNCarVideoModel.m */; };
+		BB67CAD31CE0B5910042FD95 /* CNCarVideoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB67CAD21CE0B5910042FD95 /* CNCarVideoViewModel.m */; };
+		BB67CAD61CE0B7DC0042FD95 /* CNVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB67CAD51CE0B7DC0042FD95 /* CNVideoCell.m */; };
+		BB67CAD91CE0C0C90042FD95 /* CNVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB67CAD81CE0C0C90042FD95 /* CNVideoViewController.m */; };
 		BB7C709A1CCF8DCC00E56ADA /* CNBrandIntroductionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7C70991CCF8DCC00E56ADA /* CNBrandIntroductionModel.m */; };
 		BB7C709D1CCF92C800E56ADA /* CNBrandIntroductionController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7C709C1CCF92C800E56ADA /* CNBrandIntroductionController.m */; };
 		BB81882A1CC34F66002C335A /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8188291CC34F66002C335A /* libxml2.tbd */; };
@@ -272,6 +276,14 @@
 		BB5B80AF1CD22E8E0066B46D /* CNHotSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNHotSearchModel.h; sourceTree = "<group>"; };
 		BB5B80B01CD22E8E0066B46D /* CNHotSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNHotSearchModel.m; sourceTree = "<group>"; };
 		BB5B80B51CD23E390066B46D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BB67CACE1CE0B0500042FD95 /* CNCarVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarVideoModel.h; sourceTree = "<group>"; };
+		BB67CACF1CE0B0500042FD95 /* CNCarVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCarVideoModel.m; sourceTree = "<group>"; };
+		BB67CAD11CE0B5910042FD95 /* CNCarVideoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarVideoViewModel.h; sourceTree = "<group>"; };
+		BB67CAD21CE0B5910042FD95 /* CNCarVideoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCarVideoViewModel.m; sourceTree = "<group>"; };
+		BB67CAD41CE0B7DC0042FD95 /* CNVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNVideoCell.h; sourceTree = "<group>"; };
+		BB67CAD51CE0B7DC0042FD95 /* CNVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNVideoCell.m; sourceTree = "<group>"; };
+		BB67CAD71CE0C0C90042FD95 /* CNVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNVideoViewController.h; sourceTree = "<group>"; };
+		BB67CAD81CE0C0C90042FD95 /* CNVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNVideoViewController.m; sourceTree = "<group>"; };
 		BB7C70981CCF8DCC00E56ADA /* CNBrandIntroductionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBrandIntroductionModel.h; sourceTree = "<group>"; };
 		BB7C70991CCF8DCC00E56ADA /* CNBrandIntroductionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNBrandIntroductionModel.m; sourceTree = "<group>"; };
 		BB7C709B1CCF92C800E56ADA /* CNBrandIntroductionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBrandIntroductionController.h; sourceTree = "<group>"; };
@@ -1566,6 +1578,8 @@
 				BBBD0F0C1CDB7A0C00F9021A /* CNDetailTalkAboutViewController.m */,
 				BB54BDF01CD8D216004C2C8B /* CNEvaluatingViewController.h */,
 				BB54BDF11CD8D216004C2C8B /* CNEvaluatingViewController.m */,
+				BB67CAD71CE0C0C90042FD95 /* CNVideoViewController.h */,
+				BB67CAD81CE0C0C90042FD95 /* CNVideoViewController.m */,
 			);
 			name = "首页";
 			sourceTree = "<group>";
@@ -1705,6 +1719,8 @@
 				BBDA51771CD7299500661FD2 /* CNNewsAlbumModel.m */,
 				BBBD0F051CDB6F3400F9021A /* CNDetailTalkAboutModel.h */,
 				BBBD0F061CDB6F3400F9021A /* CNDetailTalkAboutModel.m */,
+				BB67CACE1CE0B0500042FD95 /* CNCarVideoModel.h */,
+				BB67CACF1CE0B0500042FD95 /* CNCarVideoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1770,6 +1786,8 @@
 				BB9CB8121CD19AF90026722F /* CNNewCarCell.m */,
 				BBDA51731CD70C0100661FD2 /* CNAlbumListCell.h */,
 				BBDA51741CD70C0100661FD2 /* CNAlbumListCell.m */,
+				BB67CAD41CE0B7DC0042FD95 /* CNVideoCell.h */,
+				BB67CAD51CE0B7DC0042FD95 /* CNVideoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1812,6 +1830,8 @@
 				BB54BDF41CD8D235004C2C8B /* CNEvaluatingViewModel.m */,
 				BBBD0F081CDB763800F9021A /* CNDetailTalkAboutViewModel.h */,
 				BBBD0F091CDB763900F9021A /* CNDetailTalkAboutViewModel.m */,
+				BB67CAD11CE0B5910042FD95 /* CNCarVideoViewModel.h */,
+				BB67CAD21CE0B5910042FD95 /* CNCarVideoViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -2013,6 +2033,7 @@
 				BB8189CB1CC35088002C335A /* XMPPCapabilities.xcdatamodel in Sources */,
 				BB8189A71CC35088002C335A /* XMPPRoomHybrid.xcdatamodeld in Sources */,
 				BB8189CC1CC35088002C335A /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
+				BB67CAD01CE0B0500042FD95 /* CNCarVideoModel.m in Sources */,
 				BB8189971CC35088002C335A /* XMPPUserCoreDataStorageObject.m in Sources */,
 				BB8189F31CC35088002C335A /* ContextFilterLogFormatter.m in Sources */,
 				BB8189A91CC35088002C335A /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
@@ -2020,6 +2041,7 @@
 				BBBD0F0A1CDB763900F9021A /* CNDetailTalkAboutViewModel.m in Sources */,
 				BB142F3F1CCE421B00F4B1A9 /* CNMoreViewController.m in Sources */,
 				BB8189951CC35088002C335A /* XMPPRoster.xcdatamodel in Sources */,
+				BB67CAD91CE0C0C90042FD95 /* CNVideoViewController.m in Sources */,
 				BBEB34761CC10ECD0023EE66 /* CNNewsCell.m in Sources */,
 				BB8189DB1CC35088002C335A /* XMPPAutoPing.m in Sources */,
 				BB8189D01CC35088002C335A /* XMPPMessageArchiving.xcdatamodeld in Sources */,
@@ -2029,6 +2051,7 @@
 				BB8189931CC35088002C335A /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				BB5B809E1CD1E5AA0066B46D /* CNCarSearchViewModel.m in Sources */,
 				BB8189B51CC35088002C335A /* XMPPvCardTempCoreDataStorageObject.m in Sources */,
+				BB67CAD61CE0B7DC0042FD95 /* CNVideoCell.m in Sources */,
 				BB8189B81CC35088002C335A /* XMPPvCardTempAdrTypes.m in Sources */,
 				BB8189BE1CC35088002C335A /* NSXMLElement+XEP_0059.m in Sources */,
 				BB8189F41CC35088002C335A /* DispatchQueueLogFormatter.m in Sources */,
@@ -2041,6 +2064,7 @@
 				BBEB34741CC10ECD0023EE66 /* DPAPI.m in Sources */,
 				BB81898B1CC35088002C335A /* XMPPParser.m in Sources */,
 				BB8189981CC35088002C335A /* XMPPResourceMemoryStorageObject.m in Sources */,
+				BB67CAD31CE0B5910042FD95 /* CNCarVideoViewModel.m in Sources */,
 				BB8189EE1CC35088002C335A /* DDAbstractDatabaseLogger.m in Sources */,
 				BB8189EB1CC35088002C335A /* XMPPSRVResolver.m in Sources */,
 				BBDA516B1CD6FC1100661FD2 /* CNNewsAlbumListViewModel.m in Sources */,

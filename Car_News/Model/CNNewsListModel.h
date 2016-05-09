@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class NewsListDataModel,NewsListListModel;
+@class NewsListDataModel,NewsListDataListModel;
 @interface CNNewsListModel : NSObject
 
 @property (nonatomic, assign) NSInteger status;
@@ -20,11 +20,11 @@
 @end
 @interface NewsListDataModel : NSObject
 
-@property (nonatomic, strong) NSArray<NewsListListModel *> *list;
+@property (nonatomic, strong) NSArray<NewsListDataListModel *> *list;
 
 @end
 
-@interface NewsListListModel : NSObject
+@interface NewsListDataListModel : NSObject
 
 @property (nonatomic, assign) NSInteger newsId;
 

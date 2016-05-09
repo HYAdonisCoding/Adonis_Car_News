@@ -25,7 +25,7 @@
 - (NSInteger)newsIDForIndex: (NSInteger)index;
 /** 根据Model */
 /** 新闻 */
-@property (nonatomic,strong) NSMutableArray<NewsListListModel *> *newsList;
+@property (nonatomic,strong) NSMutableArray<NewsListDataListModel *> *newsList;
 //
 @property (nonatomic,assign) NSInteger pageNumber;
 - (void)getNewsWithRequestMode: (RequestMode)requestMode completionHandler:(void(^)(NSError *error))completoinHandler;

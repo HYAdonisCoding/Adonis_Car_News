@@ -9,16 +9,18 @@
 #import "CNNewsListModel.h"
 
 @implementation CNNewsListModel
-
++ (NSDictionary *)modelContainerPropertyGenericClass{
+    return @{@"data":[NewsListDataModel class]};
+}
 @end
 @implementation NewsListDataModel
 + (NSDictionary *)modelContainerPropertyGenericClass{
-    return @{@"list":[NewsListListModel class]};
+    return @{@"list":[NewsListDataListModel class]};
 }
 @end
 
 
-@implementation NewsListListModel
+@implementation NewsListDataListModel
 
 @end
 

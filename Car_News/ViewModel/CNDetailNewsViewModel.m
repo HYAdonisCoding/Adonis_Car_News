@@ -18,7 +18,7 @@
     }
     return _newsLine;
 }
-- (void)getDetailNewsURLWithNewsListlistModel:(NewsListListModel *)model RequestMode:(RequestMode)requestMode completionHandler:(void (^)(NSError *error,id resobject))completoinHandler {
+- (void)getDetailNewsURLWithNewsListlistModel:(NewsListDataListModel *)model RequestMode:(RequestMode)requestMode completionHandler:(void (^)(NSError *error,id resobject))completoinHandler {
     
     [CNNetManager getDetailNewsWithNewsID:model.newsId lastModify:model.lastModify completionHandler:^(DetailNewsDataModel *model, NSError *error) {
         if (!error) {

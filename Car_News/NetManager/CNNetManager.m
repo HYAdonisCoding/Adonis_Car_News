@@ -158,5 +158,13 @@
         complteionHandler([CNNewsAlbumModel parseJSON:reponseObj], error);
     }];
 }
+/** 用于请求视频数据 */
++ (void)getCarVideoListWithPageIndex:(NSInteger)pageIndex andPageIndex:(NSInteger)pageSize completionHandler:(void (^)(CNCarVideoModel *, NSError *))completionHandler {
+    NSString *path = @"http://api.ycapp.yiche.com/video/GetAppVideoList/";
+    NSDictionary *params = @{@"pagesize": @(pageSize),@"pageindex": @(pageIndex),@"plat": @1};
+    [self GET:path parameters:params progress:nil completionHandler:^(id reponseObj, NSError *error) {
+        completionHandler([CNCarVideoModel parseJSON:reponseObj],error);
+    }];
+}
 
 @end

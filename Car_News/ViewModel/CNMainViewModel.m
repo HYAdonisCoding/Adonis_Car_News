@@ -27,7 +27,7 @@
 - (NSInteger)newsIDForIndex:(NSInteger)index{
     return self.newsList[index].newsId;
 }
-- (NSMutableArray<NewsListListModel *> *)newsList{
+- (NSMutableArray<NewsListDataListModel *> *)newsList{
     if (!_newsList) {
         _newsList = [NSMutableArray new];
     }

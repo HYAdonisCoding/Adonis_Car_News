@@ -45,7 +45,7 @@
         NSInteger width = style.width;
         /** 使用Label的富文本显示图片 */
         NSTextAttachment *attachment = [NSTextAttachment new];
-        attachment.bounds = CGRectMake(0, 0, kScreenW - 20, (kScreenW - 20) * height / width);
+        attachment.bounds = CGRectMake(0, 0, kScreenW - 40, (kScreenW - 40) * height / width);
         attachment.image = imageView.image;
         NSAttributedString *attributedStr = [NSAttributedString attributedStringWithAttachment:attachment];
         label.attributedText = attributedStr;
@@ -58,9 +58,9 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return self.data.title;
 }
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section {
-    return UITableViewAutomaticDimension;
-}
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section {
+//    return UITableViewAutomaticDimension;
+//}
 #pragma mark -- Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -80,6 +80,8 @@
         }];
     }];
     [self.tableView beginHeaderRefresh];
+    self.tableView.estimatedRowHeight = 100;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 

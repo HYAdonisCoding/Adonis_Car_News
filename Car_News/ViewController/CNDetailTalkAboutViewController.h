@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class NewsListListModel;
+@class NewsListDataListModel;
 
 @interface CNDetailTalkAboutViewController : UIViewController
 
 /** 说车 */
-@property (nonatomic,strong) NewsListListModel *data;
+@property (nonatomic,strong) NewsListDataListModel *data;
 
 @end

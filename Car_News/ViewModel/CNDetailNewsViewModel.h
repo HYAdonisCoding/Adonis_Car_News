@@ -25,7 +25,7 @@
 /** 根据Model */
 /** 新闻行数 */
 @property (nonatomic,strong) NSMutableArray<DetailNewsDataContentModel *> *newsLine;
-- (void)getDetailNewsURLWithNewsListlistModel: (NewsListListModel *)model RequestMode: (RequestMode)requestMode completionHandler:(void(^)(NSError *error,id resobject))completoinHandler;
+- (void)getDetailNewsURLWithNewsListlistModel: (NewsListDataListModel *)model RequestMode: (RequestMode)requestMode completionHandler:(void(^)(NSError *error,id resobject))completoinHandler;
 
 
 @end

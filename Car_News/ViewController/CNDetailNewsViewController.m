@@ -52,9 +52,9 @@
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewAutomaticDimension;
 }
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section {
-    return UITableViewAutomaticDimension;
-}
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section {
+//    return UITableViewAutomaticDimension;
+//}
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return self.model.title;
 }
@@ -105,7 +105,9 @@
     // 为了让系统能够先预定tableView的整体高度
     self.tableView.estimatedRowHeight = 140;
     // 2.设置tableView的实际行高要根据自动布局产生的高度决定
-    self.tableView.rowHeight = UITableViewAutomaticDimension;;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    self.tableView.tableHeaderView.height = UITableViewAutomaticDimension;
 }
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

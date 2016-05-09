@@ -10,4 +10,7 @@
 
 @interface CNEvaluatingViewController : UIViewController
 
+/** categoryId */
+@property (nonatomic,assign) NSInteger categoryId;
+
 @end

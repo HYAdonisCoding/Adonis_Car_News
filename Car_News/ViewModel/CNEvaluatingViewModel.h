@@ -18,11 +18,11 @@
 - (NSInteger)getEvaluatingNewsIDForIndex: (NSInteger)index;
 /** 根据Model */
 /** 新闻 */
-@property (nonatomic,strong) NSMutableArray<NewsListListModel *> *newsList;
+@property (nonatomic,strong) NSMutableArray<NewsListDataListModel *> *newsList;
 //新闻页数
 @property (nonatomic,assign) NSInteger pageNumber;
 /** 新闻的个数 */
 @property (nonatomic,assign) NSInteger rowNumber;
-- (void)getNewsWithRequestMode: (RequestMode)requestMode completionHandler:(void(^)(NSError *error))completoinHandler;
+- (void)getNewsWithRequestMode: (RequestMode)requestMode andCategoryId:(NSInteger)categoryId completionHandler:(void(^)(NSError *error))completoinHandler;
 
 @end

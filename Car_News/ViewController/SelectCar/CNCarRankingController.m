@@ -132,9 +132,9 @@
     self.carLevel = carLevel;
     [self headerRefresh];
 }
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
+//- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//}
 #pragma mark - Table view data source
 /** 表格可以自适应 */
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {

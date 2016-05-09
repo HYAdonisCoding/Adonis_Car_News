@@ -11,6 +11,7 @@
 #import "CNAlbumViewController.h"
 #import "CNTalkAboutCarViewController.h"
 #import "CNEvaluatingViewController.h"
+#import "CNVideoViewController.h"
 
 @interface CNMainWMPageViewController ()
 
@@ -59,18 +60,21 @@
         }
         case 3: {//"评测"
             CNEvaluatingViewController *vc = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNEvaluatingViewController class])];
+            vc.categoryId = 1;
             return vc;
         }
         case 4: {//"新车"
-            CNTalkAboutCarViewController *vc = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNTalkAboutCarViewController class])];
+            CNEvaluatingViewController *vc = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNEvaluatingViewController class])];
+            vc.categoryId = 3;
             return vc;
         }
         case 5: {//"视频"
-            CNTalkAboutCarViewController *vc = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNTalkAboutCarViewController class])];
+            CNVideoViewController *vc = [[CNVideoViewController alloc] init];
             return vc;
         }
         case 6: {//"导购"
-            CNTalkAboutCarViewController *vc = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNTalkAboutCarViewController class])];
+            CNEvaluatingViewController *vc = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNEvaluatingViewController class])];
+            vc.categoryId = 2;
             return vc;
         }
         default:

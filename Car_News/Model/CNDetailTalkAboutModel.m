@@ -15,7 +15,7 @@
 @end
 @implementation CNDetailTalkAboutDataModel
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"data":[CNDetailTalkAboutDataContentModel class], @"shareData":[CNDetailTalkAboutDataShareDataModel class],@"user":[CNDetailTalkAboutDataUserModel class]};
+    return @{@"content":[CNDetailTalkAboutDataContentModel class], @"shareData":[CNDetailTalkAboutDataShareDataModel class],@"user":[CNDetailTalkAboutDataUserModel class]};
 }
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"carSerialData": @"carserialData", @"subsNewsId": @"subsnewsid"};
