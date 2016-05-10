@@ -16,6 +16,6 @@
 /** 数据组 */
 @property (nonatomic,strong) NSMutableArray<CNDetailTalkAboutDataContentModel *> *dataList;
 /** 获取数据 */
-- (void)getDetailTalkAboutCarWithNewsListlistModel: (NewsListDataListModel *)model completionHandler:(void(^)(NSError *error))completoinHandler;
+- (void)getDetailTalkAboutCarWithNewsListlistModel: (NewsListDataListModel *)model categoryId:(NSInteger)categoryId completionHandler:(void(^)(NSError *error))completoinHandler;
 
 @end

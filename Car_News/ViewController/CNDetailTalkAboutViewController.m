@@ -67,7 +67,7 @@
     self.navigationItem.title = @"说车详情";
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.tableView addHeaderRefresh:^{
-        [self.detailTalkAboutVM getDetailTalkAboutCarWithNewsListlistModel:self.data completionHandler:^(NSError *error) {
+        [self.detailTalkAboutVM getDetailTalkAboutCarWithNewsListlistModel:self.data categoryId: self completionHandler:^(NSError *error) {
             if (error) {
                 [self.view showWarning:error.localizedDescription];
             } else {

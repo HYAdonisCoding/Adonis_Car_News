@@ -19,11 +19,11 @@
     }
     return _dataList;
 }
-- (void)getDetailTalkAboutCarWithNewsListlistModel:(NewsListDataListModel *)model completionHandler:(void (^)(NSError *))completoinHandler {
-    [CNNetManager getDetailTalkAboutCarWithNewsID:model.newsId lastModify: model.lastModify completionHandler:^(CNDetailTalkAboutModel *model, NSError *error) {
+- (void)getDetailTalkAboutCarWithNewsListlistModel:(NewsListDataListModel *)model categoryId:(NSInteger)categoryId completionHandler:(void (^)(NSError *))completoinHandler {
+    [CNNetManager getDetailTalkAboutCarWithNewsID:model.newsId categoryId:categoryId completionHandler:^(CNDetailTalkAboutModel *model, NSError *error) {
         if (!error) {
-           [self.dataList addObjectsFromArray: model.data.content];
-           //MYLog(@"%@",model.data.content);
+            [self.dataList addObjectsFromArray: model.data.content];
+            //MYLog(@"%@",model.data.content);
         }
         completoinHandler(error);
     }];

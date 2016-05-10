@@ -9,16 +9,21 @@
 #import "CNVideoCell.h"
 #import "UILabel+Auto.h"
 
+#define kImageViewW 172
+#define kImageViewH 96
+
 @implementation CNVideoCell
 
 - (UIImageView *)coverImageView {
     if (!_coverImageView) {
         _coverImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+        //_coverImageView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:_coverImageView];
         [_coverImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(10);
-            make.left.right.equalTo(0);
-            make.height.equalTo(140);
+            make.top.equalTo(0);
+            make.left.equalTo(20);
+            make.right.equalTo(-20);
+            make.height.equalTo((kScreenW-40)/kImageViewW * kImageViewH);
         }];
     }
     return _coverImageView;
@@ -27,9 +32,11 @@
     if (!_titleLabel) {
         _titleLabel = [UILabel labelWithFrame:CGRectZero];
         _titleLabel.font = [UIFont fontWithName:@"Helvetica-BoldOblique" size:20];
+        //_titleLabel.textColor = [UIColor blackColor];
         [self addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.and.left.and.right.equalTo(20);
+            make.top.equalTo(10);
+            make.left.and.right.equalTo(20);
             make.height.equalTo(20);
         }];
     }
@@ -38,6 +45,7 @@
 - (UILabel *)durationLabel {
     if (!_durationLabel) {
         _durationLabel = [UILabel labelWithFrame:CGRectZero];
+        //_durationLabel.textColor = [UIColor blackColor];
         [self addSubview:_durationLabel];
         [_durationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(-20);

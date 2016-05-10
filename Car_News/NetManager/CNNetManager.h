@@ -55,7 +55,7 @@
 /** 新闻详情 */
 + (void)getDetailNewsWithNewsID: (NSInteger)ID lastModify: (NSString *)lastModify completionHandler: (void(^)(DetailNewsDataModel *model, NSError *error))completionHandler;
 /** 请求说车详情 */
-+ (void)getDetailTalkAboutCarWithNewsID: (NSInteger)ID lastModify: (NSString *)lastModify completionHandler: (void(^)(CNDetailTalkAboutModel *model, NSError *error))completionHandler;
++ (void)getDetailTalkAboutCarWithNewsID: (NSInteger)ID categoryId: (NSInteger)categoryId completionHandler: (void(^)(CNDetailTalkAboutModel *model, NSError *error))completionHandler;
 + (void)getSelectCarWithPage: (NSInteger)page completionHandler: (void(^)(SelectCarDataModel *model, NSError *error))completionHandler;
 /** 请求广告轮换信息 */
 + (void)getNewsAdvertiseWithPage:(NSInteger)page andLength: (NSInteger)length CompletionHandler: (void(^)(NewsAdvertisementDataModel *model, NSError *error))completionHandler;

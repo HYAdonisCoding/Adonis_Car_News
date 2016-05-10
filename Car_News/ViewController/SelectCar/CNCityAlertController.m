@@ -60,6 +60,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView reloadData];
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
 }
 
 @end

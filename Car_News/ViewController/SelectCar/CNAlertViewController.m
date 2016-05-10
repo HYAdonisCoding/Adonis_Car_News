@@ -145,6 +145,7 @@
     [super viewDidLoad];
     self.preferredContentSize = CGSizeMake(self.view.bounds.size.width*0.7, self.view.bounds.size.height);
     NSInteger masterId = (NSInteger)self.dataModel.masterId;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.alertVM getSerialListWithMasterId:masterId CompletionHandler:^(NSError *error) {
         if (error) {
             [self.view showWarning:error.localizedDescription];

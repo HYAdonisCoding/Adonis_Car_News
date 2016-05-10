@@ -14,5 +14,7 @@
 
 /** 说车 */
 @property (nonatomic,strong) NewsListDataListModel *data;
+/**  */
+@property (nonatomic,assign) NSInteger categoryId;
 
 @end

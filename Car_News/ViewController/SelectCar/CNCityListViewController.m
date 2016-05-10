@@ -162,12 +162,10 @@
     [self presentViewController:cityAlertVC animated:YES completion:nil];
 }
 #pragma mark -- Life Cycle
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    //self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     [self.cityListVM getCityListCompletionHandler:^(NSError *error) {
         if (error) {
             [self.view showWarning:error.localizedDescription];

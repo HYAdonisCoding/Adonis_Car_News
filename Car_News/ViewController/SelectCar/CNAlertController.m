@@ -24,6 +24,7 @@
     [super viewDidLoad];
     /** 设置弹出后的大小 */
     self.preferredContentSize = self.contentSize;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 - (instancetype)initWithSourceView:(UIView *)sourceView bySourceRect:(CGRect)sourceRect andContentSize:(CGSize)contentSize andDirection:(UIPopoverArrowDirection)direction {

@@ -127,9 +127,8 @@
             [weakSelf.tableView endFooterRefresh];
         }];
     }];
-//    self.tableView.estimatedRowHeight = 160;
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.rowHeight = 190;
+    self.tableView.estimatedRowHeight = 248;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 @end

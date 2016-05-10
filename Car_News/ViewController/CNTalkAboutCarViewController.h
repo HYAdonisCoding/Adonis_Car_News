@@ -10,4 +10,7 @@
 
 @interface CNTalkAboutCarViewController : UIViewController
 
+/**  */
+@property (nonatomic,assign) NSInteger categoryId;
+
 @end

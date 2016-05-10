@@ -9,6 +9,7 @@
 #import "CNEvaluatingViewController.h"
 #import "CNEvaluatingViewModel.h"
 #import "CNNewsCell.h"
+#import "CNDetailTalkAboutViewController.h"
 
 @interface CNEvaluatingViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -42,9 +43,14 @@
     [cell.iconImageView sd_setImageWithURL:[self.evaluatingVM getEvaluatingIconURLForIndex:row] placeholderImage:[UIImage imageNamed:@"defalut_background7"]];
     return cell;
 }
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return UITableViewAutomaticDimension;
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NewsListDataListModel *model = self.evaluatingVM.newsList[indexPath.row];
+    CNDetailTalkAboutViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNDetailTalkAboutViewController class])];
+    vc.data = model;
+    vc.categoryId = self.categoryId;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma mark -- Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -70,7 +76,7 @@
             [weakSelf.tableView endFooterRefresh];
         }];
     }];
-    self.tableView.estimatedRowHeight = 110;
+    self.tableView.estimatedRowHeight = 100;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 

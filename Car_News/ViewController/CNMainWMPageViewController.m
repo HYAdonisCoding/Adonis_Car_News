@@ -56,6 +56,7 @@
         }
         case 2: {//"说车"
             CNTalkAboutCarViewController *vc = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([CNTalkAboutCarViewController class])];
+            vc.categoryId = 0;
             return vc;
         }
         case 3: {//"评测"

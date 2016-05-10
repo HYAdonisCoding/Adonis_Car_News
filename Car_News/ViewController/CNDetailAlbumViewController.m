@@ -52,23 +52,21 @@
         textView.textAlignment = NSTextAlignmentCenter;
         //Helvetica-Oblique,TimesNewRomanPS-ItalicMT
         textView.font = [UIFont fontWithName:@"Helvetica" size:16];;
-        textView.textAlignment = NSTextAlignmentLeft;
         //禁止编辑
         textView.editable = NO;
         textView.text = self.newsAlbumVM.albumList[i].content;
         [scrollView addSubview:textView];
-        UITextView *headerTextView = [[UITextView alloc] initWithFrame:CGRectMake(i * scrollView.bounds.size.width , self.topLayoutGuide.length, kScreenW, 88)];
+        UITextView *headerTextView = [[UITextView alloc] initWithFrame:CGRectMake(i * scrollView.bounds.size.width , self.topLayoutGuide.length, kScreenW, 44)];
         headerTextView.backgroundColor = kRGBColor(31, 34, 45, 1.0);
         headerTextView.alpha = 0.8;
         headerTextView.textColor = [UIColor whiteColor];
         //中心对齐
         headerTextView.textAlignment = NSTextAlignmentCenter;
         //Helvetica-Oblique,TimesNewRomanPS-ItalicMT
-        headerTextView.font = [UIFont fontWithName:@"Helvetica" size:20];;
-        headerTextView.textAlignment = NSTextAlignmentLeft;
+        headerTextView.font = [UIFont fontWithName:@"Helvetica" size:18];;
         //禁止编辑
         headerTextView.editable = NO;
-        headerTextView.text = self.data.title;
+        headerTextView.text = [NSString stringWithFormat:@"%ld/%ld %@",i+1,self.newsAlbumVM.albumList.count,self.data.title];
         [scrollView addSubview:headerTextView];
     }
     /** 滚动视图边缘不可弹跳 */

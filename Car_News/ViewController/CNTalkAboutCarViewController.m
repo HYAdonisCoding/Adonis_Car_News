@@ -51,6 +51,7 @@
     if ([destVC isKindOfClass:[CNDetailTalkAboutViewController class]]) {
         CNDetailTalkAboutViewController *vc = (CNDetailTalkAboutViewController *)destVC;
         vc.data = sender;
+        vc.categoryId = self.categoryId;
     }
 }
 /** 表格可以自适应 */

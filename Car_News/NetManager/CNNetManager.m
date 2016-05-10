@@ -140,12 +140,19 @@
     }];
 }
 /** 请求说车详情 */
-+(void)getDetailTalkAboutCarWithNewsID:(NSInteger)ID lastModify: (NSString *)lastModify completionHandler:(void (^)(CNDetailTalkAboutModel *, NSError *))completionHandler {
-    NSString *path = @"http://api.ycapp.yiche.com/media/GetStructMedia";
++(void)getDetailTalkAboutCarWithNewsID:(NSInteger)ID categoryId: (NSInteger)categoryId completionHandler:(void (^)(CNDetailTalkAboutModel *, NSError *))completionHandler {
+    NSString *path = nil;
+    if (categoryId == 0) {
+        path = @"http://api.ycapp.yiche.com/media/GetStructMedia";
+    } else {
+        path = @"http://api.ycapp.yiche.com/news/GetStructYCNews";
+    }
+    
 //    NSDate *currentdate = [[NSDate alloc] init];
 //    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 //    [formatter setDateFormat:@"yyyyMMddHHmmss"];
-    NSDictionary *params = @{@"newsId":@(ID),@"plat":@1,@"ts":lastModify};
+    //NSDictionary *params = @{@"newsId":@(ID),@"plat":@1,@"ts":lastModify};
+    NSDictionary *params = @{@"newsId":@(ID),@"plat":@1};
     [self GET:path parameters:params progress:nil completionHandler:^(id reponseObj, NSError *error) {
         completionHandler([CNDetailTalkAboutModel parseJSON:reponseObj], error);
     }];

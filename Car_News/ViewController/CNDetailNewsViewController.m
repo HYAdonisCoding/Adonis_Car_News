@@ -70,7 +70,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"新闻详情";
-    
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     if (self.model) {
