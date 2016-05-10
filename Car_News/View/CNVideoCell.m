@@ -18,7 +18,7 @@
         [_coverImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(10);
             make.left.right.equalTo(0);
-            make.height.equalTo(120);
+            make.height.equalTo(140);
         }];
     }
     return _coverImageView;
@@ -26,6 +26,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [UILabel labelWithFrame:CGRectZero];
+        _titleLabel.font = [UIFont fontWithName:@"Helvetica-BoldOblique" size:20];
         [self addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.and.left.and.right.equalTo(20);
@@ -40,7 +41,8 @@
         [self addSubview:_durationLabel];
         [_durationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(-20);
-            make.bottom.equalTo(self.coverImageView.bottom).offset(-20);
+            make.height.equalTo(20);
+            make.bottom.equalTo(self.coverImageView.mas_bottom).offset(-10);
         }];
     }
     return _durationLabel;
@@ -48,10 +50,12 @@
 - (UILabel *)sourceNameLabel {
     if (!_sourceNameLabel) {
         _sourceNameLabel = [UILabel labelWithFrame:CGRectZero];
+        _sourceNameLabel.textColor = [UIColor grayColor];
         [self addSubview:_sourceNameLabel];
         [_sourceNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.coverImageView.bottom).offset(10);
+            make.top.equalTo(self.coverImageView.mas_bottom).offset(10);
             make.left.equalTo(20);
+            make.height.equalTo(20);
             make.bottom.equalTo(-10);
         }];
     }
@@ -60,11 +64,13 @@
 - (UILabel *)totalVisitLabel {
     if (!_totalVisitLabel) {
         _totalVisitLabel = [UILabel labelWithFrame:CGRectZero];
+        _totalVisitLabel.textColor = [UIColor grayColor];
         [self addSubview:_totalVisitLabel];
         [_totalVisitLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(-20);
-            make.top.equalTo(self.coverImageView.bottom).offset(10);
+            make.top.equalTo(self.coverImageView.mas_bottom).offset(10);
             make.bottom.equalTo(-10);
+            make.height.equalTo(20);
         }];
     }
     return _totalVisitLabel;
@@ -72,11 +78,13 @@
 - (UILabel *)commentCountLabel {
     if (!_commentCountLabel) {
         _commentCountLabel = [UILabel labelWithFrame:CGRectZero];
+        _commentCountLabel.textColor = [UIColor grayColor];
         [self addSubview:_commentCountLabel];
         [_commentCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.coverImageView.bottom).offset(10);
-            make.right.equalTo(self.totalVisitLabel.left).offset(10);
+            make.top.equalTo(self.coverImageView.mas_bottom).offset(10);
+            make.right.equalTo(self.totalVisitLabel.mas_left).offset(-10);
             make.bottom.equalTo(-10);
+            make.height.equalTo(20);
         }];
     }
     return _commentCountLabel;

@@ -16,10 +16,10 @@
     return self.newsList[index].newsId;
 }
 - (NSURL *)getEvaluatingIconURLForIndex:(NSInteger)index {
-    return [NSURL URLWithString:[self.newsList[index].picCover stringByReplacingOccurrencesOfString:@"{0}-{1}" withString:@"9-6"]];
+    return [NSURL URLWithString:[self.newsList[index].picCover stringByReplacingOccurrencesOfString:@"{0}-{1}" withString:@"270-180"]];
 }
 - (NSString *)getEvaluatingMediaNameForIndex:(NSInteger)index {
-    return self.newsList[index].mediaName;
+    return self.newsList[index].publishTime;
 }
 - (NSString *)getEvaluatingCommentNumberForIndex:(NSInteger)index {
     return [NSString stringWithFormat:@"%ld",self.newsList[index].commentCount];
@@ -45,7 +45,7 @@
                 [self.newsList removeAllObjects];
             }
             [self.newsList addObjectsFromArray:model.list];
-            MYLog(@"%@",self.newsList);
+            //MYLog(@"%@",self.newsList);
         }
         completoinHandler(error);
     }];

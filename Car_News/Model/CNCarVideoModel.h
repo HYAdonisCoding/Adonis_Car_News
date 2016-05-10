@@ -48,7 +48,7 @@
 //coverimg->coverImg
 @property (nonatomic, copy) NSString *coverImg;
 //modifytime->modifyTime
-@property (nonatomic, copy) NSString *modifytime;
+@property (nonatomic, copy) NSString *modifyTime;
 
 @end
 

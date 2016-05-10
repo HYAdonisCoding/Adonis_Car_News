@@ -26,7 +26,13 @@
     return [NSString stringWithFormat:@"%ld",self.videoList[index].commentCount];
 }
 - (NSURL *)getVideoCoverImageForIndex:(NSInteger)index {
-    return [NSURL URLWithString:self.videoList[index].coverImg];
+    return [NSURL URLWithString:[self.videoList[index].coverImg stringByReplacingOccurrencesOfString:@"{0}-{1}" withString:@"172-124"]];
+}
+- (NSMutableArray<CNCarVideoDataListModel *> *)videoList {
+    if (!_videoList) {
+        _videoList = [NSMutableArray array];
+    }
+    return _videoList;
 }
 - (void)getCarVideoRequestMode:(RequestMode)requestMode completionHandler:(void (^)(NSError *))completoinHandler {
     NSInteger tmpPageSize = 20;
