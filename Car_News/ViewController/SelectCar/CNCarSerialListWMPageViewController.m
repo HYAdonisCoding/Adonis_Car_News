@@ -8,30 +8,52 @@
 
 #import "CNCarSerialListWMPageViewController.h"
 #import "CNSerialVideoViewController.h"
+#import "CNTransferInfo.h"
+#import "CNSerialModel.h"
 
 @implementation CNCarSerialListWMPageViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.title = [CNTransferInfo sharedCNTransferInfo].model.serialName;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(goBackCarList)];
+}
+- (void)goBackCarList {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (NSInteger)numbersOfChildControllersInPageController:(WMPageController *)pageController {
     return 7;
 }
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
     switch (index) {
-        case 0:
-            return nil;
-            
-        case 1:
-            
-            return nil;
-        case 2:
-            return nil;
-        case 3:
-            return nil;
-        case 4:
-            return nil;
-        case 5:
-            return nil;
-        case 6:
-            return nil;
+        case 0:{
+            CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
+            return vc;
+        }
+        case 1:{
+            CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
+            return vc;
+        }
+        case 2:{
+            CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
+            return vc;
+        }
+        case 3:{
+            CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
+            return vc;
+        }
+        case 4:{
+            CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
+            return vc;
+        }
+        case 5:{
+            CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
+            return vc;
+        }
+        case 6:{
+            CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
+            return vc;
+        }
         default:
             return nil;
     }

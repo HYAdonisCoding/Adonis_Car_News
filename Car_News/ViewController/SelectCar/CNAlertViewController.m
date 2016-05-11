@@ -130,7 +130,7 @@
             for (NSInteger i=0; i<indexPath.section; i++) {
                 lineNumber += [self.sectionDict[@(i)] integerValue];
             }
-            [CNTransferInfo sharedCNTransferInfo].model = self.alertVM.serialList[indexPath.row + lineNumber];
+            [CNTransferInfo sharedCNTransferInfo].model = self.alertVM.serialList[indexPath.row + lineNumber - 1];
         }
         
         [self presentViewController:navi animated:YES completion:nil];

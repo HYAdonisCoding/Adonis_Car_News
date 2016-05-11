@@ -178,6 +178,7 @@
 		BBA1937E1CE2D51D0085963D /* CNSerialVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA1937D1CE2D51D0085963D /* CNSerialVideoViewController.m */; };
 		BBA193811CE2D6310085963D /* CNSerialVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193801CE2D6310085963D /* CNSerialVideoCell.m */; };
 		BBA193841CE2E7080085963D /* CNSerialVideoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193831CE2E7080085963D /* CNSerialVideoViewModel.m */; };
+		BBA193871CE321290085963D /* CNArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193861CE321290085963D /* CNArticleModel.m */; };
 		BBABA25A1CC647B500F19787 /* CNCarRankingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBABA2591CC647B500F19787 /* CNCarRankingModel.m */; };
 		BBABA2601CC64DAF00F19787 /* CNCarRankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBABA25F1CC64DAF00F19787 /* CNCarRankingCell.m */; };
 		BBBD0F071CDB6F3400F9021A /* CNDetailTalkAboutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0F061CDB6F3400F9021A /* CNDetailTalkAboutModel.m */; };
@@ -592,6 +593,8 @@
 		BBA193801CE2D6310085963D /* CNSerialVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSerialVideoCell.m; sourceTree = "<group>"; };
 		BBA193821CE2E7080085963D /* CNSerialVideoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSerialVideoViewModel.h; sourceTree = "<group>"; };
 		BBA193831CE2E7080085963D /* CNSerialVideoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSerialVideoViewModel.m; sourceTree = "<group>"; };
+		BBA193851CE321290085963D /* CNArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNArticleModel.h; sourceTree = "<group>"; };
+		BBA193861CE321290085963D /* CNArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNArticleModel.m; sourceTree = "<group>"; };
 		BBABA2581CC647B500F19787 /* CNCarRankingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarRankingModel.h; sourceTree = "<group>"; };
 		BBABA2591CC647B500F19787 /* CNCarRankingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCarRankingModel.m; sourceTree = "<group>"; };
 		BBABA25E1CC64DAF00F19787 /* CNCarRankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarRankingCell.h; sourceTree = "<group>"; };
@@ -1622,6 +1625,8 @@
 				BB7C70991CCF8DCC00E56ADA /* CNBrandIntroductionModel.m */,
 				BBA193791CE2D1190085963D /* CNSerialVideoModel.h */,
 				BBA1937A1CE2D1190085963D /* CNSerialVideoModel.m */,
+				BBA193851CE321290085963D /* CNArticleModel.h */,
+				BBA193861CE321290085963D /* CNArticleModel.m */,
 			);
 			name = SelectedCar;
 			sourceTree = "<group>";
@@ -2111,6 +2116,7 @@
 				BBEB34761CC10ECD0023EE66 /* CNNewsCell.m in Sources */,
 				BB8189DB1CC35088002C335A /* XMPPAutoPing.m in Sources */,
 				BB8189D01CC35088002C335A /* XMPPMessageArchiving.xcdatamodeld in Sources */,
+				BBA193871CE321290085963D /* CNArticleModel.m in Sources */,
 				BB8189C01CC35088002C335A /* XMPPIQ+XEP_0060.m in Sources */,
 				BB8189F71CC35088002C335A /* DDXMLDocument.m in Sources */,
 				BB8189CE1CC35088002C335A /* XMPPCapsResourceCoreDataStorageObject.m in Sources */,
