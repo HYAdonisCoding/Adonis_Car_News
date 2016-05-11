@@ -164,10 +164,9 @@
                 [self.view showWarning:error.localizedDescription];
             } else {
                 [self.tableView reloadData];
+                [self setupAdvertisementView];
             }
             [self.tableView endHeaderRefresh];
-//            [self setupHeaderView];
-            [self setupAdvertisementView];
         }];
     }];
     [self.tableView beginHeaderRefresh];

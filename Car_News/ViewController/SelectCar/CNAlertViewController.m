@@ -10,6 +10,7 @@
 #import "CNAlertViewModel.h"
 #import "CNCarSerialCell.h"
 #import "CNTransferInfo.h"
+#import "CNCarSerialListWMPageViewController.h"
 
 @interface CNAlertViewController () <UIPopoverPresentationControllerDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -85,7 +86,6 @@
         while ([cell.contentView.subviews lastObject] != nil) {
             [(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];
         }
-//    }
     if (indexPath.section == 0) {
         cell = [[UITableViewCell alloc] init];
         [cell.imageView sd_setImageWithURL:[NSURL URLWithString:self.dataModel.logoUrl] placeholderImage:[UIImage imageNamed:@"logo_rolls"]];
@@ -119,8 +119,25 @@
         UINavigationController *brandNavi = [storyboard instantiateViewControllerWithIdentifier:@"BrandNavigation"];
         [CNTransferInfo sharedCNTransferInfo].masterId = self.dataModel.masterId;
         [self presentViewController:brandNavi animated:YES completion:nil];
+    } else {
+        
+        CNCarSerialListWMPageViewController *vc = [[CNCarSerialListWMPageViewController alloc] init];
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+        if (indexPath.section == 1) {
+            [CNTransferInfo sharedCNTransferInfo].model = self.alertVM.serialList[indexPath.row];
+        } else {
+            NSInteger lineNumber = 0;
+            for (NSInteger i=0; i<indexPath.section; i++) {
+                lineNumber += [self.sectionDict[@(i)] integerValue];
+            }
+            [CNTransferInfo sharedCNTransferInfo].model = self.alertVM.serialList[indexPath.row + lineNumber];
+        }
+        
+        [self presentViewController:navi animated:YES completion:nil];
+        
     }
 }
+
 #pragma mark -- UIPopoverControllerDelegate
 /** 要让弹出效果在iPhone下生效 */
 - (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller traitCollection:(UITraitCollection *)traitCollection {

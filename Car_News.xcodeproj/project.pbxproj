@@ -173,6 +173,11 @@
 		BB9CB8131CD19AF90026722F /* CNNewCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9CB8121CD19AF90026722F /* CNNewCarCell.m */; };
 		BB9CB8161CD19C380026722F /* CNNewCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9CB8151CD19C380026722F /* CNNewCarViewController.m */; };
 		BB9CB8191CD1A88C0026722F /* CNCarSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9CB8181CD1A88C0026722F /* CNCarSearchController.m */; };
+		BBA193781CE2C8EB0085963D /* CNCarSerialListWMPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193771CE2C8EB0085963D /* CNCarSerialListWMPageViewController.m */; };
+		BBA1937B1CE2D1190085963D /* CNSerialVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA1937A1CE2D1190085963D /* CNSerialVideoModel.m */; };
+		BBA1937E1CE2D51D0085963D /* CNSerialVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA1937D1CE2D51D0085963D /* CNSerialVideoViewController.m */; };
+		BBA193811CE2D6310085963D /* CNSerialVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193801CE2D6310085963D /* CNSerialVideoCell.m */; };
+		BBA193841CE2E7080085963D /* CNSerialVideoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193831CE2E7080085963D /* CNSerialVideoViewModel.m */; };
 		BBABA25A1CC647B500F19787 /* CNCarRankingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBABA2591CC647B500F19787 /* CNCarRankingModel.m */; };
 		BBABA2601CC64DAF00F19787 /* CNCarRankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBABA25F1CC64DAF00F19787 /* CNCarRankingCell.m */; };
 		BBBD0F071CDB6F3400F9021A /* CNDetailTalkAboutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0F061CDB6F3400F9021A /* CNDetailTalkAboutModel.m */; };
@@ -577,6 +582,16 @@
 		BB9CB8151CD19C380026722F /* CNNewCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNNewCarViewController.m; sourceTree = "<group>"; };
 		BB9CB8171CD1A88C0026722F /* CNCarSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarSearchController.h; sourceTree = "<group>"; };
 		BB9CB8181CD1A88C0026722F /* CNCarSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCarSearchController.m; sourceTree = "<group>"; };
+		BBA193761CE2C8EB0085963D /* CNCarSerialListWMPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarSerialListWMPageViewController.h; sourceTree = "<group>"; };
+		BBA193771CE2C8EB0085963D /* CNCarSerialListWMPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCarSerialListWMPageViewController.m; sourceTree = "<group>"; };
+		BBA193791CE2D1190085963D /* CNSerialVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSerialVideoModel.h; sourceTree = "<group>"; };
+		BBA1937A1CE2D1190085963D /* CNSerialVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSerialVideoModel.m; sourceTree = "<group>"; };
+		BBA1937C1CE2D51D0085963D /* CNSerialVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSerialVideoViewController.h; sourceTree = "<group>"; };
+		BBA1937D1CE2D51D0085963D /* CNSerialVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSerialVideoViewController.m; sourceTree = "<group>"; };
+		BBA1937F1CE2D6310085963D /* CNSerialVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSerialVideoCell.h; sourceTree = "<group>"; };
+		BBA193801CE2D6310085963D /* CNSerialVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSerialVideoCell.m; sourceTree = "<group>"; };
+		BBA193821CE2E7080085963D /* CNSerialVideoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSerialVideoViewModel.h; sourceTree = "<group>"; };
+		BBA193831CE2E7080085963D /* CNSerialVideoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSerialVideoViewModel.m; sourceTree = "<group>"; };
 		BBABA2581CC647B500F19787 /* CNCarRankingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarRankingModel.h; sourceTree = "<group>"; };
 		BBABA2591CC647B500F19787 /* CNCarRankingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCarRankingModel.m; sourceTree = "<group>"; };
 		BBABA25E1CC64DAF00F19787 /* CNCarRankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarRankingCell.h; sourceTree = "<group>"; };
@@ -1531,9 +1546,10 @@
 			path = libidn;
 			sourceTree = "<group>";
 		};
-		BB9A7B441CC36BD50046909C /* SelectCar */ = {
+		BB9A7B441CC36BD50046909C /* SelectedCar */ = {
 			isa = PBXGroup;
 			children = (
+				BBA193751CE2C7850085963D /* CarSerialList */,
 				BB76FB571CC506EC00DEB984 /* detail */,
 				BB9A7B481CC36C290046909C /* AlertView */,
 				BB9A7B451CC36BD50046909C /* CNSelectCarViewController.h */,
@@ -1541,6 +1557,7 @@
 				BB1ABBAB1CC8B63300CAF9B3 /* CNCityListViewController.h */,
 				BB1ABBAC1CC8B63300CAF9B3 /* CNCityListViewController.m */,
 			);
+			name = SelectedCar;
 			path = SelectCar;
 			sourceTree = "<group>";
 		};
@@ -1559,7 +1576,112 @@
 			name = AlertView;
 			sourceTree = "<group>";
 		};
-		BBDA516F1CD7065700661FD2 /* 首页 */ = {
+		BBA193711CE2C47E0085963D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BBEB342D1CC10ECD0023EE66 /* CNDetailNewsModel.h */,
+				BBEB342E1CC10ECD0023EE66 /* CNDetailNewsModel.m */,
+				BBEB342F1CC10ECD0023EE66 /* CNNewsAdvertisementModel.h */,
+				BBEB34301CC10ECD0023EE66 /* CNNewsAdvertisementModel.m */,
+				BBEB34311CC10ECD0023EE66 /* CNNewsListModel.h */,
+				BBEB34321CC10ECD0023EE66 /* CNNewsListModel.m */,
+				BBDA51661CD6F8A400661FD2 /* CNAlbumListModel.h */,
+				BBDA51671CD6F8A400661FD2 /* CNAlbumListModel.m */,
+				BBDA51761CD7299500661FD2 /* CNNewsAlbumModel.h */,
+				BBDA51771CD7299500661FD2 /* CNNewsAlbumModel.m */,
+				BBBD0F051CDB6F3400F9021A /* CNDetailTalkAboutModel.h */,
+				BBBD0F061CDB6F3400F9021A /* CNDetailTalkAboutModel.m */,
+				BB67CACE1CE0B0500042FD95 /* CNCarVideoModel.h */,
+				BB67CACF1CE0B0500042FD95 /* CNCarVideoModel.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		BBA193721CE2C4980085963D /* SelectedCar */ = {
+			isa = PBXGroup;
+			children = (
+				BB9CB80B1CD1921F0026722F /* CNNewCarModel.h */,
+				BB9CB80C1CD1921F0026722F /* CNNewCarModel.m */,
+				BB5B80991CD1DE810066B46D /* CNCarSearchModel.h */,
+				BB5B809A1CD1DE810066B46D /* CNCarSearchModel.m */,
+				BB5B80AF1CD22E8E0066B46D /* CNHotSearchModel.h */,
+				BB5B80B01CD22E8E0066B46D /* CNHotSearchModel.m */,
+				BBEB342B1CC10ECD0023EE66 /* CNCarsListModel.h */,
+				BBEB342C1CC10ECD0023EE66 /* CNCarsListModel.m */,
+				BBEB34331CC10ECD0023EE66 /* CNSelectCarModel.h */,
+				BBEB34341CC10ECD0023EE66 /* CNSelectCarModel.m */,
+				BBEB34351CC10ECD0023EE66 /* CNSupportCityModel.h */,
+				BBEB34361CC10ECD0023EE66 /* CNSupportCityModel.m */,
+				BB9A7B4C1CC3758D0046909C /* CNSerialModel.h */,
+				BB9A7B4D1CC3758D0046909C /* CNSerialModel.m */,
+				BBABA2581CC647B500F19787 /* CNCarRankingModel.h */,
+				BBABA2591CC647B500F19787 /* CNCarRankingModel.m */,
+				BB1ABBA51CC8A3AD00CAF9B3 /* CNCityListModel.h */,
+				BB1ABBA61CC8A3AD00CAF9B3 /* CNCityListModel.m */,
+				BB7C70981CCF8DCC00E56ADA /* CNBrandIntroductionModel.h */,
+				BB7C70991CCF8DCC00E56ADA /* CNBrandIntroductionModel.m */,
+				BBA193791CE2D1190085963D /* CNSerialVideoModel.h */,
+				BBA1937A1CE2D1190085963D /* CNSerialVideoModel.m */,
+			);
+			name = SelectedCar;
+			sourceTree = "<group>";
+		};
+		BBA193731CE2C54F0085963D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BBDA51691CD6FC1100661FD2 /* CNNewsAlbumListViewModel.h */,
+				BBDA516A1CD6FC1100661FD2 /* CNNewsAlbumListViewModel.m */,
+				BBDA51791CD72E2300661FD2 /* CNNewsAlbumViewModel.h */,
+				BBDA517A1CD72E2300661FD2 /* CNNewsAlbumViewModel.m */,
+				BB54BDF31CD8D235004C2C8B /* CNEvaluatingViewModel.h */,
+				BB54BDF41CD8D235004C2C8B /* CNEvaluatingViewModel.m */,
+				BBBD0F081CDB763800F9021A /* CNDetailTalkAboutViewModel.h */,
+				BBBD0F091CDB763900F9021A /* CNDetailTalkAboutViewModel.m */,
+				BB67CAD11CE0B5910042FD95 /* CNCarVideoViewModel.h */,
+				BB67CAD21CE0B5910042FD95 /* CNCarVideoViewModel.m */,
+				BBEB34591CC10ECD0023EE66 /* CNDetailNewsViewModel.h */,
+				BBEB345A1CC10ECD0023EE66 /* CNDetailNewsViewModel.m */,
+				BBEB345B1CC10ECD0023EE66 /* CNHeaderAdvertisementViewModel.h */,
+				BBEB345C1CC10ECD0023EE66 /* CNHeaderAdvertisementViewModel.m */,
+				BBEB345D1CC10ECD0023EE66 /* CNMainViewModel.h */,
+				BBEB345E1CC10ECD0023EE66 /* CNMainViewModel.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		BBA193741CE2C55A0085963D /* SelectedCar */ = {
+			isa = PBXGroup;
+			children = (
+				BBEB345F1CC10ECD0023EE66 /* CNSelectCarViewModel.h */,
+				BBEB34601CC10ECD0023EE66 /* CNSelectCarViewModel.m */,
+				BB9A7B4F1CC379AA0046909C /* CNAlertViewModel.h */,
+				BB9A7B501CC379AA0046909C /* CNAlertViewModel.m */,
+				BB59CACE1CC7A46100B552E0 /* CNCarRankingViewModel.h */,
+				BB59CACF1CC7A46100B552E0 /* CNCarRankingViewModel.m */,
+				BB1ABBA81CC8A65400CAF9B3 /* CNCityListViewModel.h */,
+				BB1ABBA91CC8A65400CAF9B3 /* CNCityListViewModel.m */,
+				BB9CB80E1CD195980026722F /* CNNewCarViewModel.h */,
+				BB9CB80F1CD195980026722F /* CNNewCarViewModel.m */,
+				BB5B809C1CD1E5AA0066B46D /* CNCarSearchViewModel.h */,
+				BB5B809D1CD1E5AA0066B46D /* CNCarSearchViewModel.m */,
+				BBA193821CE2E7080085963D /* CNSerialVideoViewModel.h */,
+				BBA193831CE2E7080085963D /* CNSerialVideoViewModel.m */,
+			);
+			name = SelectedCar;
+			sourceTree = "<group>";
+		};
+		BBA193751CE2C7850085963D /* CarSerialList */ = {
+			isa = PBXGroup;
+			children = (
+				BBA193761CE2C8EB0085963D /* CNCarSerialListWMPageViewController.h */,
+				BBA193771CE2C8EB0085963D /* CNCarSerialListWMPageViewController.m */,
+				BBA1937C1CE2D51D0085963D /* CNSerialVideoViewController.h */,
+				BBA1937D1CE2D51D0085963D /* CNSerialVideoViewController.m */,
+			);
+			name = CarSerialList;
+			sourceTree = "<group>";
+		};
+		BBDA516F1CD7065700661FD2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				BBDA516C1CD7062900661FD2 /* CNMainWMPageViewController.h */,
@@ -1581,7 +1703,7 @@
 				BB67CAD71CE0C0C90042FD95 /* CNVideoViewController.h */,
 				BB67CAD81CE0C0C90042FD95 /* CNVideoViewController.m */,
 			);
-			name = "首页";
+			name = Main;
 			sourceTree = "<group>";
 		};
 		BBEB33D71CC10E890023EE66 = {
@@ -1687,40 +1809,8 @@
 		BBEB342A1CC10ECD0023EE66 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BBEB342B1CC10ECD0023EE66 /* CNCarsListModel.h */,
-				BBEB342C1CC10ECD0023EE66 /* CNCarsListModel.m */,
-				BBEB342D1CC10ECD0023EE66 /* CNDetailNewsModel.h */,
-				BBEB342E1CC10ECD0023EE66 /* CNDetailNewsModel.m */,
-				BBEB342F1CC10ECD0023EE66 /* CNNewsAdvertisementModel.h */,
-				BBEB34301CC10ECD0023EE66 /* CNNewsAdvertisementModel.m */,
-				BBEB34311CC10ECD0023EE66 /* CNNewsListModel.h */,
-				BBEB34321CC10ECD0023EE66 /* CNNewsListModel.m */,
-				BBEB34331CC10ECD0023EE66 /* CNSelectCarModel.h */,
-				BBEB34341CC10ECD0023EE66 /* CNSelectCarModel.m */,
-				BBEB34351CC10ECD0023EE66 /* CNSupportCityModel.h */,
-				BBEB34361CC10ECD0023EE66 /* CNSupportCityModel.m */,
-				BB9A7B4C1CC3758D0046909C /* CNSerialModel.h */,
-				BB9A7B4D1CC3758D0046909C /* CNSerialModel.m */,
-				BBABA2581CC647B500F19787 /* CNCarRankingModel.h */,
-				BBABA2591CC647B500F19787 /* CNCarRankingModel.m */,
-				BB1ABBA51CC8A3AD00CAF9B3 /* CNCityListModel.h */,
-				BB1ABBA61CC8A3AD00CAF9B3 /* CNCityListModel.m */,
-				BB7C70981CCF8DCC00E56ADA /* CNBrandIntroductionModel.h */,
-				BB7C70991CCF8DCC00E56ADA /* CNBrandIntroductionModel.m */,
-				BB9CB80B1CD1921F0026722F /* CNNewCarModel.h */,
-				BB9CB80C1CD1921F0026722F /* CNNewCarModel.m */,
-				BB5B80991CD1DE810066B46D /* CNCarSearchModel.h */,
-				BB5B809A1CD1DE810066B46D /* CNCarSearchModel.m */,
-				BB5B80AF1CD22E8E0066B46D /* CNHotSearchModel.h */,
-				BB5B80B01CD22E8E0066B46D /* CNHotSearchModel.m */,
-				BBDA51661CD6F8A400661FD2 /* CNAlbumListModel.h */,
-				BBDA51671CD6F8A400661FD2 /* CNAlbumListModel.m */,
-				BBDA51761CD7299500661FD2 /* CNNewsAlbumModel.h */,
-				BBDA51771CD7299500661FD2 /* CNNewsAlbumModel.m */,
-				BBBD0F051CDB6F3400F9021A /* CNDetailTalkAboutModel.h */,
-				BBBD0F061CDB6F3400F9021A /* CNDetailTalkAboutModel.m */,
-				BB67CACE1CE0B0500042FD95 /* CNCarVideoModel.h */,
-				BB67CACF1CE0B0500042FD95 /* CNCarVideoModel.m */,
+				BBA193711CE2C47E0085963D /* Main */,
+				BBA193721CE2C4980085963D /* SelectedCar */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1788,6 +1878,8 @@
 				BBDA51741CD70C0100661FD2 /* CNAlbumListCell.m */,
 				BB67CAD41CE0B7DC0042FD95 /* CNVideoCell.h */,
 				BB67CAD51CE0B7DC0042FD95 /* CNVideoCell.m */,
+				BBA1937F1CE2D6310085963D /* CNSerialVideoCell.h */,
+				BBA193801CE2D6310085963D /* CNSerialVideoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1795,8 +1887,8 @@
 		BBEB344F1CC10ECD0023EE66 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BBDA516F1CD7065700661FD2 /* 首页 */,
-				BB9A7B441CC36BD50046909C /* SelectCar */,
+				BBDA516F1CD7065700661FD2 /* Main */,
+				BB9A7B441CC36BD50046909C /* SelectedCar */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1804,34 +1896,8 @@
 		BBEB34581CC10ECD0023EE66 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BBEB34591CC10ECD0023EE66 /* CNDetailNewsViewModel.h */,
-				BBEB345A1CC10ECD0023EE66 /* CNDetailNewsViewModel.m */,
-				BBEB345B1CC10ECD0023EE66 /* CNHeaderAdvertisementViewModel.h */,
-				BBEB345C1CC10ECD0023EE66 /* CNHeaderAdvertisementViewModel.m */,
-				BBEB345D1CC10ECD0023EE66 /* CNMainViewModel.h */,
-				BBEB345E1CC10ECD0023EE66 /* CNMainViewModel.m */,
-				BBEB345F1CC10ECD0023EE66 /* CNSelectCarViewModel.h */,
-				BBEB34601CC10ECD0023EE66 /* CNSelectCarViewModel.m */,
-				BB9A7B4F1CC379AA0046909C /* CNAlertViewModel.h */,
-				BB9A7B501CC379AA0046909C /* CNAlertViewModel.m */,
-				BB59CACE1CC7A46100B552E0 /* CNCarRankingViewModel.h */,
-				BB59CACF1CC7A46100B552E0 /* CNCarRankingViewModel.m */,
-				BB1ABBA81CC8A65400CAF9B3 /* CNCityListViewModel.h */,
-				BB1ABBA91CC8A65400CAF9B3 /* CNCityListViewModel.m */,
-				BB9CB80E1CD195980026722F /* CNNewCarViewModel.h */,
-				BB9CB80F1CD195980026722F /* CNNewCarViewModel.m */,
-				BB5B809C1CD1E5AA0066B46D /* CNCarSearchViewModel.h */,
-				BB5B809D1CD1E5AA0066B46D /* CNCarSearchViewModel.m */,
-				BBDA51691CD6FC1100661FD2 /* CNNewsAlbumListViewModel.h */,
-				BBDA516A1CD6FC1100661FD2 /* CNNewsAlbumListViewModel.m */,
-				BBDA51791CD72E2300661FD2 /* CNNewsAlbumViewModel.h */,
-				BBDA517A1CD72E2300661FD2 /* CNNewsAlbumViewModel.m */,
-				BB54BDF31CD8D235004C2C8B /* CNEvaluatingViewModel.h */,
-				BB54BDF41CD8D235004C2C8B /* CNEvaluatingViewModel.m */,
-				BBBD0F081CDB763800F9021A /* CNDetailTalkAboutViewModel.h */,
-				BBBD0F091CDB763900F9021A /* CNDetailTalkAboutViewModel.m */,
-				BB67CAD11CE0B5910042FD95 /* CNCarVideoViewModel.h */,
-				BB67CAD21CE0B5910042FD95 /* CNCarVideoViewModel.m */,
+				BBA193741CE2C55A0085963D /* SelectedCar */,
+				BBA193731CE2C54F0085963D /* Main */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -2054,6 +2120,7 @@
 				BB67CAD61CE0B7DC0042FD95 /* CNVideoCell.m in Sources */,
 				BB8189B81CC35088002C335A /* XMPPvCardTempAdrTypes.m in Sources */,
 				BB8189BE1CC35088002C335A /* NSXMLElement+XEP_0059.m in Sources */,
+				BBA193811CE2D6310085963D /* CNSerialVideoCell.m in Sources */,
 				BB8189F41CC35088002C335A /* DispatchQueueLogFormatter.m in Sources */,
 				BB8189D21CC35088002C335A /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
 				BB8189891CC35088002C335A /* XMPPMessage.m in Sources */,
@@ -2071,6 +2138,7 @@
 				BBEB346D1CC10ECD0023EE66 /* CNSelectCarModel.m in Sources */,
 				BB8189AB1CC35088002C335A /* XMPPRoomMemoryStorage.m in Sources */,
 				BBDA51751CD70C0100661FD2 /* CNAlbumListCell.m in Sources */,
+				BBA1937E1CE2D51D0085963D /* CNSerialVideoViewController.m in Sources */,
 				BB59CAD01CC7A46100B552E0 /* CNCarRankingViewModel.m in Sources */,
 				BB8189C31CC35088002C335A /* XMPPIQ+XEP_0066.m in Sources */,
 				BBEB346F1CC10ECD0023EE66 /* CNNetManager.m in Sources */,
@@ -2121,6 +2189,7 @@
 				BBDA51721CD708E700661FD2 /* CNAlbumViewController.m in Sources */,
 				BBDA516E1CD7062900661FD2 /* CNMainWMPageViewController.m in Sources */,
 				BBEB346A1CC10ECD0023EE66 /* CNDetailNewsModel.m in Sources */,
+				BBA193781CE2C8EB0085963D /* CNCarSerialListWMPageViewController.m in Sources */,
 				BB8189C21CC35088002C335A /* TURNSocket.m in Sources */,
 				BB8189921CC35088002C335A /* XMPPReconnect.m in Sources */,
 				BB8189A01CC35088002C335A /* XMPPIQ+LastActivity.m in Sources */,
@@ -2175,6 +2244,7 @@
 				BB8189DE1CC35088002C335A /* XMPPTime.m in Sources */,
 				BB8189F61CC35088002C335A /* NSString+DDXML.m in Sources */,
 				BB8189BD1CC35088002C335A /* XMPPvCardTempTel.m in Sources */,
+				BBA1937B1CE2D1190085963D /* CNSerialVideoModel.m in Sources */,
 				BB8189B91CC35088002C335A /* XMPPvCardTempBase.m in Sources */,
 				BB8189E11CC35088002C335A /* XMPPAttentionModule.m in Sources */,
 				BB8189A11CC35088002C335A /* XMPPLastActivity.m in Sources */,
@@ -2202,6 +2272,7 @@
 				BB8189AA1CC35088002C335A /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
 				BB8189A51CC35088002C335A /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
 				BB8189B71CC35088002C335A /* XMPPvCardTempAdr.m in Sources */,
+				BBA193841CE2E7080085963D /* CNSerialVideoViewModel.m in Sources */,
 				BB81899F1CC35088002C335A /* XMPPJabberRPCModule.m in Sources */,
 				BB81899A1CC35088002C335A /* XMPPUserMemoryStorageObject.m in Sources */,
 				BB8189861CC35088002C335A /* XMPPElement.m in Sources */,

@@ -17,13 +17,19 @@
 - (UIImageView *)coverImageView {
     if (!_coverImageView) {
         _coverImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-        //_coverImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _coverImageView.contentMode = UIViewContentModeScaleToFill;
+        UIImageView *bf = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sc_video_play_big_play_icon"]];
         [self addSubview:_coverImageView];
+        [self addSubview:bf];
+        [bf mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.coverImageView.mas_centerX);
+            make.centerY.equalTo(self.coverImageView.mas_centerY);
+        }];
         [_coverImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(0);
-            make.left.equalTo(20);
-            make.right.equalTo(-20);
-            make.height.equalTo((kScreenW-40)/kImageViewW * kImageViewH);
+            make.left.equalTo(0);
+            make.right.equalTo(0);
+            //make.height.equalTo((kScreenW-40)/kImageViewW * kImageViewH);
         }];
     }
     return _coverImageView;
@@ -77,7 +83,7 @@
         [_totalVisitLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(-20);
             make.top.equalTo(self.coverImageView.mas_bottom).offset(10);
-            make.bottom.equalTo(-10);
+            //make.bottom.equalTo(-10);
             make.height.equalTo(20);
         }];
     }
@@ -91,7 +97,7 @@
         [_commentCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.coverImageView.mas_bottom).offset(10);
             make.right.equalTo(self.totalVisitLabel.mas_left).offset(-10);
-            make.bottom.equalTo(-10);
+            //make.bottom.equalTo(-10);
             make.height.equalTo(20);
         }];
     }

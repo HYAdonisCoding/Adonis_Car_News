@@ -24,13 +24,17 @@
 #import "CNNewsAlbumModel.h"
 #import "CNDetailTalkAboutModel.h"
 #import "CNCarVideoModel.h"
+#import "CNSerialVideoModel.h"
+#import "CNTransferInfo.h"
 
 @interface CNNetManager : NSObject
 
 /** 用于请求图片资源列表 */
 + (void)getNewsAlbumListWithPage: (NSInteger)page andLength: (NSInteger)length completionHandler: (void(^)(CNAlbumListModel *model, NSError *error))completionHandler;
-/** 用于请求视频数据 */
+/** 用于请求新闻视频数据 */
 + (void)getCarVideoListWithPageIndex: (NSInteger)pageIndex andPageIndex: (NSInteger)pageSize completionHandler: (void(^)(CNCarVideoModel *model, NSError *error))completionHandler;
+/** 用于请求车系视频数据 */
++ (void)getSerialVideoWithPage: (NSInteger)page andLength: (NSInteger)length completionHandler: (void(^)(CNSerialVideoModel *model, NSError *error))completionHandler;
 /** 用于请求数据 categoryid: 1评测 2导购 3新车 */
 + (void)getCarEvaluatingWithPageSize: (NSInteger)pageSize andPageIndex: (NSInteger)pageIndex andCategoryId: (NSInteger)categoryId completionHandler: (void(^)(NewsListDataModel *model, NSError *error))completionHandler;;
 /** 用于请求图片新闻详情 */

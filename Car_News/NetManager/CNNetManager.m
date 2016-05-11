@@ -147,7 +147,6 @@
     } else {
         path = @"http://api.ycapp.yiche.com/news/GetStructYCNews";
     }
-    
 //    NSDate *currentdate = [[NSDate alloc] init];
 //    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 //    [formatter setDateFormat:@"yyyyMMddHHmmss"];
@@ -171,6 +170,14 @@
     NSDictionary *params = @{@"pagesize": @(pageSize),@"pageindex": @(pageIndex),@"plat": @1};
     [self GET:path parameters:params progress:nil completionHandler:^(id reponseObj, NSError *error) {
         completionHandler([CNCarVideoModel parseJSON:reponseObj],error);
+    }];
+}
+/** 用于请求车系视频数据 */
++ (void)getSerialVideoWithPage:(NSInteger)page andLength: (NSInteger)length completionHandler:(void (^)(CNSerialVideoModel *, NSError *))completionHandler {
+    NSString *path = @"http://api.ycapp.yiche.com/video/getvideolistbyserialid";
+    NSDictionary *params = @{@"serialid":@([CNTransferInfo sharedCNTransferInfo].model.serialId),@"page":@(page),@"length":@(length)};
+    [self GET:path parameters:params progress:nil completionHandler:^(id reponseObj, NSError *error) {
+        completionHandler([CNSerialVideoModel parseJSON:reponseObj], error);
     }];
 }
 

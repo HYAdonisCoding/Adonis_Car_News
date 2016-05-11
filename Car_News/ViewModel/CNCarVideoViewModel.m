@@ -26,7 +26,7 @@
     return [NSString stringWithFormat:@"%ld",self.videoList[index].commentCount];
 }
 - (NSURL *)getVideoCoverImageForIndex:(NSInteger)index {
-    return [NSURL URLWithString:[self.videoList[index].coverImg stringByReplacingOccurrencesOfString:@"{0}-{1}" withString:@"172-124"]];
+    return [NSURL URLWithString:[self.videoList[index].coverImg stringByReplacingOccurrencesOfString:@"{0}-{1}" withString:@"470-380"]];
 }
 - (NSMutableArray<CNCarVideoDataListModel *> *)videoList {
     if (!_videoList) {
