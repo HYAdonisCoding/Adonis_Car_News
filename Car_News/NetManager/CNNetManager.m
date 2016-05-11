@@ -180,5 +180,20 @@
         completionHandler([CNSerialVideoModel parseJSON:reponseObj], error);
     }];
 }
-
+/** 用于请求车系文章数据 */
++ (void)getSerialArticleWithPage:(NSInteger)page andLength:(NSInteger)length completionHandler:(void (^)(CNArticleModel *, NSError *))completionHandler {
+    NSString *path = @"http://api.ycapp.yiche.com/news/getnewslist";
+    NSDictionary *params = @{@"serialid":@([CNTransferInfo sharedCNTransferInfo].model.serialId),@"pagesize":@(length),@"pageindex":@(page),@"categoryid":@8};
+    [self GET:path parameters:params progress:nil completionHandler:^(id reponseObj, NSError *error) {
+        completionHandler([CNArticleModel parseJSON:reponseObj], error);
+    }];
+}
+/** 用于请求车系文章内容数据 */
++ (void)getSerialArticleContentWithNewsId:(NSInteger)newsId lastModify:(NSString *)lastModify completionHandler:(void (^)(CNArticleContentModel *, NSError *))completionHandler {
+    NSString *path = @"http://api.ycapp.yiche.com/news/GetStructYCNews";
+    NSDictionary *params = @{@"newsId":@(newsId),@"ts":lastModify};
+    [self GET:path parameters:params progress:nil completionHandler:^(id reponseObj, NSError *error) {
+        completionHandler([CNArticleContentModel parseJSON:reponseObj], error);
+    }];
+}
 @end

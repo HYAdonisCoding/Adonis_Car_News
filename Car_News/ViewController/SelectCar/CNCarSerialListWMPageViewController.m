@@ -10,6 +10,7 @@
 #import "CNSerialVideoViewController.h"
 #import "CNTransferInfo.h"
 #import "CNSerialModel.h"
+#import "CNArticleViewController.h"
 
 @implementation CNCarSerialListWMPageViewController
 
@@ -43,7 +44,7 @@
             return vc;
         }
         case 4:{
-            CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
+            CNArticleViewController *vc = [[CNArticleViewController alloc] init];
             return vc;
         }
         case 5:{

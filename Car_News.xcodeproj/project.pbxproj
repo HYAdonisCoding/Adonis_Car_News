@@ -179,6 +179,13 @@
 		BBA193811CE2D6310085963D /* CNSerialVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193801CE2D6310085963D /* CNSerialVideoCell.m */; };
 		BBA193841CE2E7080085963D /* CNSerialVideoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193831CE2E7080085963D /* CNSerialVideoViewModel.m */; };
 		BBA193871CE321290085963D /* CNArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193861CE321290085963D /* CNArticleModel.m */; };
+		BBA1938A1CE325120085963D /* CNBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193891CE325120085963D /* CNBaseCell.m */; };
+		BBA1938D1CE329310085963D /* CNArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA1938C1CE329310085963D /* CNArticleViewController.m */; };
+		BBA193901CE329C80085963D /* CNArticleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA1938F1CE329C80085963D /* CNArticleViewModel.m */; };
+		BBA193931CE33A7D0085963D /* CNArticleContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193921CE33A7D0085963D /* CNArticleContentModel.m */; };
+		BBA193961CE348FA0085963D /* CNArticleContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193951CE348FA0085963D /* CNArticleContentViewModel.m */; };
+		BBA193991CE34B880085963D /* CNArticleContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA193981CE34B880085963D /* CNArticleContentViewController.m */; };
+		BBA1939C1CE34D0D0085963D /* CNContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA1939B1CE34D0D0085963D /* CNContentCell.m */; };
 		BBABA25A1CC647B500F19787 /* CNCarRankingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBABA2591CC647B500F19787 /* CNCarRankingModel.m */; };
 		BBABA2601CC64DAF00F19787 /* CNCarRankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBABA25F1CC64DAF00F19787 /* CNCarRankingCell.m */; };
 		BBBD0F071CDB6F3400F9021A /* CNDetailTalkAboutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBD0F061CDB6F3400F9021A /* CNDetailTalkAboutModel.m */; };
@@ -595,6 +602,20 @@
 		BBA193831CE2E7080085963D /* CNSerialVideoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSerialVideoViewModel.m; sourceTree = "<group>"; };
 		BBA193851CE321290085963D /* CNArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNArticleModel.h; sourceTree = "<group>"; };
 		BBA193861CE321290085963D /* CNArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNArticleModel.m; sourceTree = "<group>"; };
+		BBA193881CE325120085963D /* CNBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBaseCell.h; sourceTree = "<group>"; };
+		BBA193891CE325120085963D /* CNBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNBaseCell.m; sourceTree = "<group>"; };
+		BBA1938B1CE329310085963D /* CNArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNArticleViewController.h; sourceTree = "<group>"; };
+		BBA1938C1CE329310085963D /* CNArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNArticleViewController.m; sourceTree = "<group>"; };
+		BBA1938E1CE329C80085963D /* CNArticleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNArticleViewModel.h; sourceTree = "<group>"; };
+		BBA1938F1CE329C80085963D /* CNArticleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNArticleViewModel.m; sourceTree = "<group>"; };
+		BBA193911CE33A7D0085963D /* CNArticleContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNArticleContentModel.h; sourceTree = "<group>"; };
+		BBA193921CE33A7D0085963D /* CNArticleContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNArticleContentModel.m; sourceTree = "<group>"; };
+		BBA193941CE348FA0085963D /* CNArticleContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNArticleContentViewModel.h; sourceTree = "<group>"; };
+		BBA193951CE348FA0085963D /* CNArticleContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNArticleContentViewModel.m; sourceTree = "<group>"; };
+		BBA193971CE34B880085963D /* CNArticleContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNArticleContentViewController.h; sourceTree = "<group>"; };
+		BBA193981CE34B880085963D /* CNArticleContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNArticleContentViewController.m; sourceTree = "<group>"; };
+		BBA1939A1CE34D0D0085963D /* CNContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNContentCell.h; sourceTree = "<group>"; };
+		BBA1939B1CE34D0D0085963D /* CNContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNContentCell.m; sourceTree = "<group>"; };
 		BBABA2581CC647B500F19787 /* CNCarRankingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarRankingModel.h; sourceTree = "<group>"; };
 		BBABA2591CC647B500F19787 /* CNCarRankingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCarRankingModel.m; sourceTree = "<group>"; };
 		BBABA25E1CC64DAF00F19787 /* CNCarRankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarRankingCell.h; sourceTree = "<group>"; };
@@ -1627,6 +1648,8 @@
 				BBA1937A1CE2D1190085963D /* CNSerialVideoModel.m */,
 				BBA193851CE321290085963D /* CNArticleModel.h */,
 				BBA193861CE321290085963D /* CNArticleModel.m */,
+				BBA193911CE33A7D0085963D /* CNArticleContentModel.h */,
+				BBA193921CE33A7D0085963D /* CNArticleContentModel.m */,
 			);
 			name = SelectedCar;
 			sourceTree = "<group>";
@@ -1671,6 +1694,10 @@
 				BB5B809D1CD1E5AA0066B46D /* CNCarSearchViewModel.m */,
 				BBA193821CE2E7080085963D /* CNSerialVideoViewModel.h */,
 				BBA193831CE2E7080085963D /* CNSerialVideoViewModel.m */,
+				BBA1938E1CE329C80085963D /* CNArticleViewModel.h */,
+				BBA1938F1CE329C80085963D /* CNArticleViewModel.m */,
+				BBA193941CE348FA0085963D /* CNArticleContentViewModel.h */,
+				BBA193951CE348FA0085963D /* CNArticleContentViewModel.m */,
 			);
 			name = SelectedCar;
 			sourceTree = "<group>";
@@ -1682,6 +1709,10 @@
 				BBA193771CE2C8EB0085963D /* CNCarSerialListWMPageViewController.m */,
 				BBA1937C1CE2D51D0085963D /* CNSerialVideoViewController.h */,
 				BBA1937D1CE2D51D0085963D /* CNSerialVideoViewController.m */,
+				BBA1938B1CE329310085963D /* CNArticleViewController.h */,
+				BBA1938C1CE329310085963D /* CNArticleViewController.m */,
+				BBA193971CE34B880085963D /* CNArticleContentViewController.h */,
+				BBA193981CE34B880085963D /* CNArticleContentViewController.m */,
 			);
 			name = CarSerialList;
 			sourceTree = "<group>";
@@ -1885,6 +1916,10 @@
 				BB67CAD51CE0B7DC0042FD95 /* CNVideoCell.m */,
 				BBA1937F1CE2D6310085963D /* CNSerialVideoCell.h */,
 				BBA193801CE2D6310085963D /* CNSerialVideoCell.m */,
+				BBA193881CE325120085963D /* CNBaseCell.h */,
+				BBA193891CE325120085963D /* CNBaseCell.m */,
+				BBA1939A1CE34D0D0085963D /* CNContentCell.h */,
+				BBA1939B1CE34D0D0085963D /* CNContentCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2096,8 +2131,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBEB34661CC10ECD0023EE66 /* UIView+HUD.m in Sources */,
+				BBA193901CE329C80085963D /* CNArticleViewModel.m in Sources */,
 				BB8189BB1CC35088002C335A /* XMPPvCardTempLabel.m in Sources */,
 				BBEB347C1CC10ECD0023EE66 /* CNHeaderAdvertisementViewModel.m in Sources */,
+				BBA1938A1CE325120085963D /* CNBaseCell.m in Sources */,
 				BB9CB8191CD1A88C0026722F /* CNCarSearchController.m in Sources */,
 				BB8189D11CC35088002C335A /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,
 				BB8189F81CC35088002C335A /* DDXMLElement.m in Sources */,
@@ -2131,6 +2168,7 @@
 				BB8189D21CC35088002C335A /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
 				BB8189891CC35088002C335A /* XMPPMessage.m in Sources */,
 				BB8189EA1CC35088002C335A /* XMPPIDTracker.m in Sources */,
+				BBA1939C1CE34D0D0085963D /* CNContentCell.m in Sources */,
 				BB8189D31CC35088002C335A /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
 				BB5B809B1CD1DE810066B46D /* CNCarSearchModel.m in Sources */,
 				BB8189821CC35088002C335A /* XMPPXOAuth2Google.m in Sources */,
@@ -2192,11 +2230,14 @@
 				BBDA517E1CD72F7300661FD2 /* CNDetailAlbumViewController.m in Sources */,
 				BB54BDF51CD8D235004C2C8B /* CNEvaluatingViewModel.m in Sources */,
 				BB8189841CC35088002C335A /* NSNumber+XMPP.m in Sources */,
+				BBA193931CE33A7D0085963D /* CNArticleContentModel.m in Sources */,
+				BBA1938D1CE329310085963D /* CNArticleViewController.m in Sources */,
 				BBDA51721CD708E700661FD2 /* CNAlbumViewController.m in Sources */,
 				BBDA516E1CD7062900661FD2 /* CNMainWMPageViewController.m in Sources */,
 				BBEB346A1CC10ECD0023EE66 /* CNDetailNewsModel.m in Sources */,
 				BBA193781CE2C8EB0085963D /* CNCarSerialListWMPageViewController.m in Sources */,
 				BB8189C21CC35088002C335A /* TURNSocket.m in Sources */,
+				BBA193991CE34B880085963D /* CNArticleContentViewController.m in Sources */,
 				BB8189921CC35088002C335A /* XMPPReconnect.m in Sources */,
 				BB8189A01CC35088002C335A /* XMPPIQ+LastActivity.m in Sources */,
 				BB42D1381CD0A5C700B899E0 /* CNTransferInfo.m in Sources */,
@@ -2295,6 +2336,7 @@
 				BBDA51681CD6F8A400661FD2 /* CNAlbumListModel.m in Sources */,
 				BB8189D41CC35088002C335A /* XMPPMessageArchiving.m in Sources */,
 				BBDA51781CD7299500661FD2 /* CNNewsAlbumModel.m in Sources */,
+				BBA193961CE348FA0085963D /* CNArticleContentViewModel.m in Sources */,
 				BBEB34611CC10ECD0023EE66 /* AppDelegate+System.m in Sources */,
 				BB8189EC1CC35088002C335A /* XMPPStringPrep.m in Sources */,
 				BBABA2601CC64DAF00F19787 /* CNCarRankingCell.m in Sources */,

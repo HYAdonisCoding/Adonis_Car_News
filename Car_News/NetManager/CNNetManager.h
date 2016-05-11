@@ -26,6 +26,8 @@
 #import "CNCarVideoModel.h"
 #import "CNSerialVideoModel.h"
 #import "CNTransferInfo.h"
+#import "CNArticleModel.h"
+#import "CNArticleContentModel.h"
 
 @interface CNNetManager : NSObject
 
@@ -35,8 +37,12 @@
 + (void)getCarVideoListWithPageIndex: (NSInteger)pageIndex andPageIndex: (NSInteger)pageSize completionHandler: (void(^)(CNCarVideoModel *model, NSError *error))completionHandler;
 /** 用于请求车系视频数据 */
 + (void)getSerialVideoWithPage: (NSInteger)page andLength: (NSInteger)length completionHandler: (void(^)(CNSerialVideoModel *model, NSError *error))completionHandler;
+/** 用于请求车系文章数据 */
++ (void)getSerialArticleWithPage: (NSInteger)page andLength: (NSInteger)length completionHandler: (void(^)(CNArticleModel *model, NSError *error))completionHandler;
+/** 用于请求车系文章内容数据 */
++ (void)getSerialArticleContentWithNewsId: (NSInteger)newsId lastModify: (NSString *)lastModify completionHandler: (void(^)(CNArticleContentModel *model, NSError *error))completionHandler;
 /** 用于请求数据 categoryid: 1评测 2导购 3新车 */
-+ (void)getCarEvaluatingWithPageSize: (NSInteger)pageSize andPageIndex: (NSInteger)pageIndex andCategoryId: (NSInteger)categoryId completionHandler: (void(^)(NewsListDataModel *model, NSError *error))completionHandler;;
++ (void)getCarEvaluatingWithPageSize: (NSInteger)pageSize andPageIndex: (NSInteger)pageIndex andCategoryId: (NSInteger)categoryId completionHandler: (void(^)(NewsListDataModel *model, NSError *error))completionHandler;
 /** 用于请求图片新闻详情 */
 + (void)getNewsDetailAlbumWithNewsId: (NSInteger)newsId lastModify: (NSString *)lastModify CompletionHandler: (void(^)(CNNewsAlbumModel *model,NSError *error))complteionHandler;
 /** 用于请求搜索 */
