@@ -59,14 +59,14 @@
 #pragma mark -- UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     self.sectionNumber = self.alertVM.data.count + 1;
-    return self.sectionNumber;
+    return self.sectionNumber ? self.sectionNumber : 0;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSInteger numberOfRows = 0;
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
     /** 获取Section的个数 */
     if (section == 0) {
-        numberOfRows = 1;
+        numberOfRows = self.alertVM.data.firstObject.serialList.count ? 1 :  0;
         self.sectionRowNumber = numberOfRows;
     }
     else {
@@ -79,7 +79,7 @@
     }
     [dictionary setObject:@(self.sectionRowNumber) forKey:@(section)];
     [self.sectionDict addEntriesFromDictionary:dictionary];
-    return self.sectionRowNumber;
+    return self.sectionRowNumber ? self.sectionRowNumber : 0;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CNCarSerialCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
@@ -88,7 +88,12 @@
         }
     if (indexPath.section == 0) {
         cell = [[UITableViewCell alloc] init];
-        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:self.dataModel.logoUrl] placeholderImage:[UIImage imageNamed:@"logo_rolls"]];
+        NSURL *url = [NSURL URLWithString:self.dataModel.logoUrl];
+        if (!url) {
+            url = [NSURL URLWithString:self.data.picURL];
+        }
+        [cell.imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"logo_rolls"]];
+        
         cell.textLabel.text = [[self.alertVM getBrandNameForIndex:indexPath.row] stringByAppendingString:@" 品牌介绍"];
     } else if (indexPath.section == 1) {
         [cell.iconImageView sd_setImageWithURL:[self.alertVM getIconURLForIndex:indexPath.row] placeholderImage:[UIImage imageNamed:@"defalut_background3"]];
@@ -118,9 +123,11 @@
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         UINavigationController *brandNavi = [storyboard instantiateViewControllerWithIdentifier:@"BrandNavigation"];
         [CNTransferInfo sharedCNTransferInfo].masterId = self.dataModel.masterId;
+        if (![CNTransferInfo sharedCNTransferInfo].masterId) {
+            [CNTransferInfo sharedCNTransferInfo].masterId = self.data.masterId.integerValue;
+        }
         [self presentViewController:brandNavi animated:YES completion:nil];
     } else {
-        
         CNCarSerialListWMPageViewController *vc = [[CNCarSerialListWMPageViewController alloc] init];
         UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
         if (indexPath.section == 1) {
@@ -162,6 +169,9 @@
     [super viewDidLoad];
     self.preferredContentSize = CGSizeMake(self.view.bounds.size.width*0.7, self.view.bounds.size.height);
     NSInteger masterId = (NSInteger)self.dataModel.masterId;
+    if (!masterId) {
+        masterId = self.data.masterId.integerValue;
+    }
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.alertVM getSerialListWithMasterId:masterId CompletionHandler:^(NSError *error) {
         if (error) {

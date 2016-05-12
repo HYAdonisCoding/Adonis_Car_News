@@ -30,7 +30,7 @@
 }
 #pragma mark -- UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.detailTalkAboutVM.dataList.count;
+    return self.detailTalkAboutVM.dataList.count ? self.detailTalkAboutVM.dataList.count : 0;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
@@ -67,7 +67,7 @@
     self.navigationItem.title = @"说车详情";
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.tableView addHeaderRefresh:^{
-        [self.detailTalkAboutVM getDetailTalkAboutCarWithNewsListlistModel:self.data categoryId: self completionHandler:^(NSError *error) {
+        [self.detailTalkAboutVM getDetailTalkAboutCarWithNewsListlistModel:self.data categoryId: self.categoryId completionHandler:^(NSError *error) {
             if (error) {
                 [self.view showWarning:error.localizedDescription];
             } else {

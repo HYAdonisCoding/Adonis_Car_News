@@ -19,8 +19,8 @@
     }
     return _dataList;
 }
-- (void)getDetailTalkAboutCarWithNewsListlistModel:(NewsListDataListModel *)model categoryId:(NSInteger)categoryId completionHandler:(void (^)(NSError *))completoinHandler {
-    [CNNetManager getDetailTalkAboutCarWithNewsID:model.newsId categoryId:categoryId completionHandler:^(CNDetailTalkAboutModel *model, NSError *error) {
+- (void)getDetailTalkAboutCarWithNewsListlistModel:(NewsListDataListModel *)modelIn categoryId:(NSInteger)categoryId completionHandler:(void (^)(NSError *))completoinHandler {
+    [CNNetManager getDetailTalkAboutCarWithNewsID:modelIn.newsId categoryId:categoryId completionHandler:^(CNDetailTalkAboutModel *model, NSError *error) {
         if (!error) {
             [self.dataList addObjectsFromArray: model.data.content];
             //MYLog(@"%@",model.data.content);

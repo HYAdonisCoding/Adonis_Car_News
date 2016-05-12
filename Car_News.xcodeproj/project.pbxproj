@@ -14,6 +14,10 @@
 		BB1ABBAD1CC8B63300CAF9B3 /* CNCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1ABBAC1CC8B63300CAF9B3 /* CNCityListViewController.m */; };
 		BB1BFC371CC509FC00B6DF73 /* CNCarSerialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1BFC361CC509FC00B6DF73 /* CNCarSerialCell.m */; };
 		BB223D511CE434C600935F07 /* CNReducePriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB223D501CE434C600935F07 /* CNReducePriceModel.m */; };
+		BB223D541CE4709000935F07 /* CNReducePriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB223D531CE4709000935F07 /* CNReducePriceViewController.m */; };
+		BB223D571CE474DF00935F07 /* CNReducePriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB223D561CE474DF00935F07 /* CNReducePriceCell.m */; };
+		BB223D5A1CE47CD800935F07 /* CNReducePriceViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB223D591CE47CD800935F07 /* CNReducePriceViewModel.m */; };
+		BB223D5D1CE491F000935F07 /* CNReduceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB223D5C1CE491F000935F07 /* CNReduceDetailViewController.m */; };
 		BB42D1381CD0A5C700B899E0 /* CNTransferInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BB42D1371CD0A5C700B899E0 /* CNTransferInfo.m */; };
 		BB42D13B1CD0E0DA00B899E0 /* CNCarRankingController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB42D13A1CD0E0DA00B899E0 /* CNCarRankingController.m */; };
 		BB448E741CCA1CD5000A0CA7 /* CNAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB448E731CCA1CD5000A0CA7 /* CNAlertController.m */; };
@@ -267,6 +271,14 @@
 		BB1BFC361CC509FC00B6DF73 /* CNCarSerialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCarSerialCell.m; sourceTree = "<group>"; };
 		BB223D4F1CE434C600935F07 /* CNReducePriceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReducePriceModel.h; sourceTree = "<group>"; };
 		BB223D501CE434C600935F07 /* CNReducePriceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNReducePriceModel.m; sourceTree = "<group>"; };
+		BB223D521CE4709000935F07 /* CNReducePriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReducePriceViewController.h; sourceTree = "<group>"; };
+		BB223D531CE4709000935F07 /* CNReducePriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNReducePriceViewController.m; sourceTree = "<group>"; };
+		BB223D551CE474DF00935F07 /* CNReducePriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReducePriceCell.h; sourceTree = "<group>"; };
+		BB223D561CE474DF00935F07 /* CNReducePriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNReducePriceCell.m; sourceTree = "<group>"; };
+		BB223D581CE47CD800935F07 /* CNReducePriceViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReducePriceViewModel.h; sourceTree = "<group>"; };
+		BB223D591CE47CD800935F07 /* CNReducePriceViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNReducePriceViewModel.m; sourceTree = "<group>"; };
+		BB223D5B1CE491F000935F07 /* CNReduceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReduceDetailViewController.h; sourceTree = "<group>"; };
+		BB223D5C1CE491F000935F07 /* CNReduceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNReduceDetailViewController.m; sourceTree = "<group>"; };
 		BB42D1361CD0A5C700B899E0 /* CNTransferInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTransferInfo.h; sourceTree = "<group>"; };
 		BB42D1371CD0A5C700B899E0 /* CNTransferInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTransferInfo.m; sourceTree = "<group>"; };
 		BB42D1391CD0E0DA00B899E0 /* CNCarRankingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarRankingController.h; sourceTree = "<group>"; };
@@ -1703,6 +1715,8 @@
 				BBA1938F1CE329C80085963D /* CNArticleViewModel.m */,
 				BBA193941CE348FA0085963D /* CNArticleContentViewModel.h */,
 				BBA193951CE348FA0085963D /* CNArticleContentViewModel.m */,
+				BB223D581CE47CD800935F07 /* CNReducePriceViewModel.h */,
+				BB223D591CE47CD800935F07 /* CNReducePriceViewModel.m */,
 			);
 			name = SelectedCar;
 			sourceTree = "<group>";
@@ -1718,6 +1732,10 @@
 				BBA1938C1CE329310085963D /* CNArticleViewController.m */,
 				BBA193971CE34B880085963D /* CNArticleContentViewController.h */,
 				BBA193981CE34B880085963D /* CNArticleContentViewController.m */,
+				BB223D521CE4709000935F07 /* CNReducePriceViewController.h */,
+				BB223D531CE4709000935F07 /* CNReducePriceViewController.m */,
+				BB223D5B1CE491F000935F07 /* CNReduceDetailViewController.h */,
+				BB223D5C1CE491F000935F07 /* CNReduceDetailViewController.m */,
 			);
 			name = CarSerialList;
 			sourceTree = "<group>";
@@ -1925,6 +1943,8 @@
 				BBA193891CE325120085963D /* CNBaseCell.m */,
 				BBA1939A1CE34D0D0085963D /* CNContentCell.h */,
 				BBA1939B1CE34D0D0085963D /* CNContentCell.m */,
+				BB223D551CE474DF00935F07 /* CNReducePriceCell.h */,
+				BB223D561CE474DF00935F07 /* CNReducePriceCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2179,6 +2199,7 @@
 				BB8189821CC35088002C335A /* XMPPXOAuth2Google.m in Sources */,
 				BBEB34741CC10ECD0023EE66 /* DPAPI.m in Sources */,
 				BB81898B1CC35088002C335A /* XMPPParser.m in Sources */,
+				BB223D541CE4709000935F07 /* CNReducePriceViewController.m in Sources */,
 				BB8189981CC35088002C335A /* XMPPResourceMemoryStorageObject.m in Sources */,
 				BB67CAD31CE0B5910042FD95 /* CNCarVideoViewModel.m in Sources */,
 				BB8189EE1CC35088002C335A /* DDAbstractDatabaseLogger.m in Sources */,
@@ -2225,6 +2246,8 @@
 				BB8189E21CC35088002C335A /* XMPPMessage+XEP_0224.m in Sources */,
 				BB8189AE1CC35088002C335A /* XMPPMessage+XEP0045.m in Sources */,
 				BB8189AC1CC35088002C335A /* XMPPRoomMessageMemoryStorageObject.m in Sources */,
+				BB223D5A1CE47CD800935F07 /* CNReducePriceViewModel.m in Sources */,
+				BB223D5D1CE491F000935F07 /* CNReduceDetailViewController.m in Sources */,
 				BBBD0F071CDB6F3400F9021A /* CNDetailTalkAboutModel.m in Sources */,
 				BB8189AD1CC35088002C335A /* XMPPRoomOccupantMemoryStorageObject.m in Sources */,
 				BB1ABBAA1CC8A65400CAF9B3 /* CNCityListViewModel.m in Sources */,
@@ -2322,6 +2345,7 @@
 				BB8189991CC35088002C335A /* XMPPRosterMemoryStorage.m in Sources */,
 				BB8189B01CC35088002C335A /* XMPPRoom.m in Sources */,
 				BB8189E81CC35088002C335A /* GCDMulticastDelegate.m in Sources */,
+				BB223D571CE474DF00935F07 /* CNReducePriceCell.m in Sources */,
 				BB8189AA1CC35088002C335A /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
 				BB8189A51CC35088002C335A /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
 				BB8189B71CC35088002C335A /* XMPPvCardTempAdr.m in Sources */,

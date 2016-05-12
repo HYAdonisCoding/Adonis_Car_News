@@ -10,20 +10,30 @@
 #import "CNSerialVideoViewController.h"
 #import "CNTransferInfo.h"
 #import "CNSerialModel.h"
+#import "CNSelectCarModel.h"
+#import "CNHotSearchModel.h"
 #import "CNArticleViewController.h"
+#import "CNReducePriceViewController.h"
 
 @implementation CNCarSerialListWMPageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = [CNTransferInfo sharedCNTransferInfo].model.serialName;
+    NSString *name = [CNTransferInfo sharedCNTransferInfo].model.serialName;
+    if (!name) {/** 热门车型 */
+        name = [CNTransferInfo sharedCNTransferInfo].data.serialName;
+        if (!name) {/** 热门搜索 */
+            name = [CNTransferInfo sharedCNTransferInfo].dataModel.serialName;
+        }
+    }
+    self.navigationItem.title = name;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(goBackCarList)];
 }
 - (void)goBackCarList {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (NSInteger)numbersOfChildControllersInPageController:(WMPageController *)pageController {
-    return 7;
+    return 6;
 }
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
     switch (index) {
@@ -36,7 +46,7 @@
             return vc;
         }
         case 2:{
-            CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
+            CNReducePriceViewController *vc = [[CNReducePriceViewController alloc] init];
             return vc;
         }
         case 3:{
@@ -48,10 +58,6 @@
             return vc;
         }
         case 5:{
-            CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
-            return vc;
-        }
-        case 6:{
             CNSerialVideoViewController *vc = [[CNSerialVideoViewController alloc] init];
             return vc;
         }
@@ -79,9 +85,6 @@
             break;
         case 5:
             title = @"视频";
-            break;
-        case 6:
-            title = @"社区";
             break;
         default:
             break;

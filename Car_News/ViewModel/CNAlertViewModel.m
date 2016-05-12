@@ -32,19 +32,18 @@
     }
     return _serialList;
 }
-//- (NSMutableArray<CNSerialDataModel *> *)data {
-//    if (!_data) {
-//        _data = [NSMutableArray array];
-//    }
-//    return _data;
-//}
+- (NSMutableArray<CNSerialDataModel *> *)data {
+    if (!_data) {
+        _data = [NSMutableArray array];
+    }
+    return _data;
+}
 - (void)getSerialListWithMasterId:(NSInteger)masterId CompletionHandler:(void (^)(NSError *))completionHandler{
     [CNNetManager getCarSerialListWithMasterId:masterId CompletionHandler:^(CNSerialModel *model, NSError *error) {
         if (!error) {
-            self.data = [NSMutableArray array];
+            //self.data = [NSMutableArray array];
             for (NSInteger i=0; i<model.data.count; i++) {
                 CNSerialDataModel *dataModel = model.data[i];
-                
                 [self.data addObject:dataModel];
                 for (NSInteger j=0; j<dataModel.serialList.count; j++) {
                     CNSerialDataSerialListModel *listModel = dataModel.serialList[j];

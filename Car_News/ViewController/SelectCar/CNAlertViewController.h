@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class CarsListDataModel;
+@class CarsListDataModel,SelectCarHotMasterModel;
 
 @interface CNAlertViewController : UIViewController
 
@@ -19,4 +19,6 @@
 @property (nonatomic,readonly) UIView *sourceView;
 /** 接口 */
 @property (nonatomic,strong) CarsListDataModel *dataModel;
+/** ID */
+@property (nonatomic,strong) SelectCarHotMasterModel *data;
 @end

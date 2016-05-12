@@ -9,6 +9,7 @@
 #import "CNCarSearchController.h"
 #import "CNCarSearchTableViewController.h"
 #import "CNNetManager.h"
+#import "CNCarSerialListWMPageViewController.h"
 
 #define kTag 100
 
@@ -39,6 +40,13 @@
     UILabel *label = (UILabel *)[cell.contentView viewWithTag:kTag];
     label.text = self.hotList[indexPath.row].serialName;
     return cell;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    CNHotSearchDataModel *model = self.hotList[indexPath.row];
+    CNCarSerialListWMPageViewController *vc = [[CNCarSerialListWMPageViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    [CNTransferInfo sharedCNTransferInfo].dataModel = model;
+    [self presentViewController:navi animated:YES completion:nil];
 }
 /** 设置项目的size */
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {

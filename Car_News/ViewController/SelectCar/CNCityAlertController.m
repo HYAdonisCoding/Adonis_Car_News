@@ -49,6 +49,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     /** 保存城市名称 */
     [[NSUserDefaults standardUserDefaults] setObject:self.modelList[indexPath.row].cityName forKey:kCurrentCityName];
+    /** 保存城市Id */
+    [[NSUserDefaults standardUserDefaults] setObject:@(self.modelList[indexPath.row].cityId) forKey:kCurrentCityId];
     /** 同步数据 */
     [[NSUserDefaults standardUserDefaults] synchronize];
     /** 发送全局通知 */
