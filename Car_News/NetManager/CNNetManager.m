@@ -196,4 +196,16 @@
         completionHandler([CNArticleContentModel parseJSON:reponseObj], error);
     }];
 }
+/** 用于请求车系降价数据 */
++ (void)getSerialReducePriceWithSort: (NSInteger)sort andPage:(NSInteger)page andLength:(NSInteger)length completionHandler:(void (^)(CNReducePriceModel *, NSError *))completionHandler {
+    NSString *path = @"http://api.ycapp.yiche.com/vendor/getpromotionlist";
+    if (!sort) {
+        sort = 0;
+    }
+    NSDictionary *params = @{@"serialid":@([CNTransferInfo sharedCNTransferInfo].model.serialId),@"pagesize":@(length),@"pageindex":@(page),@"skip":@1,@"cityid":kCurrentCityId,@"sort":@(sort)};
+    [self GET:path parameters:params progress:nil completionHandler:^(id reponseObj, NSError *error) {
+        completionHandler([CNReducePriceModel parseJSON:reponseObj], error);
+    }];
+}
+
 @end

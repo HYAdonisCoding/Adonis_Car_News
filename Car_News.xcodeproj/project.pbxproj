@@ -13,6 +13,7 @@
 		BB1ABBAA1CC8A65400CAF9B3 /* CNCityListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1ABBA91CC8A65400CAF9B3 /* CNCityListViewModel.m */; };
 		BB1ABBAD1CC8B63300CAF9B3 /* CNCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1ABBAC1CC8B63300CAF9B3 /* CNCityListViewController.m */; };
 		BB1BFC371CC509FC00B6DF73 /* CNCarSerialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1BFC361CC509FC00B6DF73 /* CNCarSerialCell.m */; };
+		BB223D511CE434C600935F07 /* CNReducePriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB223D501CE434C600935F07 /* CNReducePriceModel.m */; };
 		BB42D1381CD0A5C700B899E0 /* CNTransferInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BB42D1371CD0A5C700B899E0 /* CNTransferInfo.m */; };
 		BB42D13B1CD0E0DA00B899E0 /* CNCarRankingController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB42D13A1CD0E0DA00B899E0 /* CNCarRankingController.m */; };
 		BB448E741CCA1CD5000A0CA7 /* CNAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB448E731CCA1CD5000A0CA7 /* CNAlertController.m */; };
@@ -264,6 +265,8 @@
 		BB1ABBAC1CC8B63300CAF9B3 /* CNCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCityListViewController.m; sourceTree = "<group>"; };
 		BB1BFC351CC509FC00B6DF73 /* CNCarSerialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarSerialCell.h; sourceTree = "<group>"; };
 		BB1BFC361CC509FC00B6DF73 /* CNCarSerialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCarSerialCell.m; sourceTree = "<group>"; };
+		BB223D4F1CE434C600935F07 /* CNReducePriceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReducePriceModel.h; sourceTree = "<group>"; };
+		BB223D501CE434C600935F07 /* CNReducePriceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNReducePriceModel.m; sourceTree = "<group>"; };
 		BB42D1361CD0A5C700B899E0 /* CNTransferInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTransferInfo.h; sourceTree = "<group>"; };
 		BB42D1371CD0A5C700B899E0 /* CNTransferInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTransferInfo.m; sourceTree = "<group>"; };
 		BB42D1391CD0E0DA00B899E0 /* CNCarRankingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNCarRankingController.h; sourceTree = "<group>"; };
@@ -1650,6 +1653,8 @@
 				BBA193861CE321290085963D /* CNArticleModel.m */,
 				BBA193911CE33A7D0085963D /* CNArticleContentModel.h */,
 				BBA193921CE33A7D0085963D /* CNArticleContentModel.m */,
+				BB223D4F1CE434C600935F07 /* CNReducePriceModel.h */,
+				BB223D501CE434C600935F07 /* CNReducePriceModel.m */,
 			);
 			name = SelectedCar;
 			sourceTree = "<group>";
@@ -2230,6 +2235,7 @@
 				BBDA517E1CD72F7300661FD2 /* CNDetailAlbumViewController.m in Sources */,
 				BB54BDF51CD8D235004C2C8B /* CNEvaluatingViewModel.m in Sources */,
 				BB8189841CC35088002C335A /* NSNumber+XMPP.m in Sources */,
+				BB223D511CE434C600935F07 /* CNReducePriceModel.m in Sources */,
 				BBA193931CE33A7D0085963D /* CNArticleContentModel.m in Sources */,
 				BBA1938D1CE329310085963D /* CNArticleViewController.m in Sources */,
 				BBDA51721CD708E700661FD2 /* CNAlbumViewController.m in Sources */,

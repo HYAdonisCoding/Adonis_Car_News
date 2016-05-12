@@ -65,14 +65,16 @@
     }
     return cell;
 }
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return UITableViewAutomaticDimension;
-//}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return self.model.title;
+}
 
 #pragma mark -- Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = self.model.title;
+    self.navigationItem.title = @"文章内容";
+    /** 返回按钮设置成白色 */
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     WK(weakSelf);
     [self.tableView addHeaderRefresh:^{
         [weakSelf.articleContentVM getArticleContentWithNewsId:weakSelf.model.newsId LastModify:weakSelf.model.lastModify completionHandler:^(NSError *error) {

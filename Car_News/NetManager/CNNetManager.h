@@ -28,6 +28,7 @@
 #import "CNTransferInfo.h"
 #import "CNArticleModel.h"
 #import "CNArticleContentModel.h"
+#import "CNReducePriceModel.h"
 
 @interface CNNetManager : NSObject
 
@@ -41,6 +42,8 @@
 + (void)getSerialArticleWithPage: (NSInteger)page andLength: (NSInteger)length completionHandler: (void(^)(CNArticleModel *model, NSError *error))completionHandler;
 /** 用于请求车系文章内容数据 */
 + (void)getSerialArticleContentWithNewsId: (NSInteger)newsId lastModify: (NSString *)lastModify completionHandler: (void(^)(CNArticleContentModel *model, NSError *error))completionHandler;
+/** 用于请求车系降价数据 */
++ (void)getSerialReducePriceWithSort: (NSInteger)sort andPage: (NSInteger)page andLength: (NSInteger)length completionHandler: (void(^)(CNReducePriceModel *model, NSError *error))completionHandler;
 /** 用于请求数据 categoryid: 1评测 2导购 3新车 */
 + (void)getCarEvaluatingWithPageSize: (NSInteger)pageSize andPageIndex: (NSInteger)pageIndex andCategoryId: (NSInteger)categoryId completionHandler: (void(^)(NewsListDataModel *model, NSError *error))completionHandler;
 /** 用于请求图片新闻详情 */

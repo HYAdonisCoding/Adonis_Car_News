@@ -165,7 +165,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    //self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     [self.cityListVM getCityListCompletionHandler:^(NSError *error) {
         if (error) {
             [self.view showWarning:error.localizedDescription];
