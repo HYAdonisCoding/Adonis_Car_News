@@ -20,7 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
      [self configGlovalUI];
     //调用分类中的方法
-//    [self setupLocation];   
+//    [self setupLocation];
+    
     return YES;
 }
 //对UI进行统一配置

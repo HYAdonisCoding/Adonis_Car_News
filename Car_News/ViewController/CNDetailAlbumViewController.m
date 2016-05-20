@@ -44,7 +44,7 @@
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         imageView.center = CGPointMake(imageView.center.x, self.view.center.y);
         [scrollView addSubview:imageView];
-        UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(i * scrollView.bounds.size.width , kScreenH * 0.67, kScreenW, kScreenH * 0.25)];
+        UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(i * scrollView.bounds.size.width , kScreenH * 0.72, kScreenW, kScreenH * 0.2)];
         textView.backgroundColor = kRGBColor(31, 34, 45, 1.0);
         textView.alpha = 0.8;
         textView.textColor = [UIColor whiteColor];
@@ -56,7 +56,7 @@
         textView.editable = NO;
         textView.text = self.newsAlbumVM.albumList[i].content;
         [scrollView addSubview:textView];
-        UITextView *headerTextView = [[UITextView alloc] initWithFrame:CGRectMake(i * scrollView.bounds.size.width , self.topLayoutGuide.length, kScreenW, 44)];
+        UITextView *headerTextView = [[UITextView alloc] initWithFrame:CGRectMake(i * scrollView.bounds.size.width, self.topLayoutGuide.length, kScreenW, 44)];
         headerTextView.backgroundColor = kRGBColor(31, 34, 45, 1.0);
         headerTextView.alpha = 0.8;
         headerTextView.textColor = [UIColor whiteColor];
