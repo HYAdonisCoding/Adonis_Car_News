@@ -42,10 +42,11 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    CNHotSearchDataModel *model = self.hotList[indexPath.row];
+//    CNHotSearchDataModel *model = self.hotList[indexPath.row];
     CNCarSerialListWMPageViewController *vc = [[CNCarSerialListWMPageViewController alloc] init];
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
-    [CNTransferInfo sharedCNTransferInfo].dataModel = model;
+    [CNTransferInfo sharedCNTransferInfo].serialName = self.hotList[indexPath.row].serialName;
+    [CNTransferInfo sharedCNTransferInfo].serialId = self.hotList[indexPath.row].serialId.integerValue;
     [self presentViewController:navi animated:YES completion:nil];
 }
 /** 设置项目的size */

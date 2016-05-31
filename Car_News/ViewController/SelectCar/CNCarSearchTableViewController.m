@@ -9,6 +9,8 @@
 #import "CNCarSearchTableViewController.h"
 #import "CNNewCarCell.h"
 #import "CNCarSearchViewModel.h"
+#import "CNCarSerialListWMPageViewController.h"
+#import "CNTransferInfo.h"
 
 @interface CNCarSearchTableViewController ()
 
@@ -72,6 +74,13 @@
 /** 表格可以自适应 */
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewAutomaticDimension;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CNCarSerialListWMPageViewController *vc = [[CNCarSerialListWMPageViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    [CNTransferInfo sharedCNTransferInfo].serialName = [self.carSearchVM getCarNameForIndex:indexPath.row];
+    [CNTransferInfo sharedCNTransferInfo].serialId = self.carSearchVM.resultList[indexPath.row].csId;
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 @end

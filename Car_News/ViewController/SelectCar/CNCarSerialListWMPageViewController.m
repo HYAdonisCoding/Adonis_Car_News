@@ -19,13 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *name = [CNTransferInfo sharedCNTransferInfo].model.serialName;
-    if (!name) {/** 热门车型 */
-        name = [CNTransferInfo sharedCNTransferInfo].data.serialName;
-        if (!name) {/** 热门搜索 */
-            name = [CNTransferInfo sharedCNTransferInfo].dataModel.serialName;
-        }
-    }
+    NSString *name = [CNTransferInfo sharedCNTransferInfo].serialName;
+//    if (!name) {/** 热门车型 */
+//        name = [CNTransferInfo sharedCNTransferInfo].data.serialName;
+//        if (!name) {/** 热门搜索 */
+//            name = [CNTransferInfo sharedCNTransferInfo].dataModel.serialName;
+//            if (!name) {
+//                name = [CNTransferInfo sharedCNTransferInfo].serialName;
+//            }
+//        }
+//    }
     self.navigationItem.title = name;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(goBackCarList)];
 }

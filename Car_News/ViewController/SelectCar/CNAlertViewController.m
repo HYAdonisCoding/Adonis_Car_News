@@ -131,13 +131,17 @@
         CNCarSerialListWMPageViewController *vc = [[CNCarSerialListWMPageViewController alloc] init];
         UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
         if (indexPath.section == 1) {
-            [CNTransferInfo sharedCNTransferInfo].model = self.alertVM.serialList[indexPath.row];
+            //[CNTransferInfo sharedCNTransferInfo].model = self.alertVM.serialList[indexPath.row];
+            [CNTransferInfo sharedCNTransferInfo].serialId = self.alertVM.serialList[indexPath.row].serialId;
+            [CNTransferInfo sharedCNTransferInfo].serialName = [self.alertVM getSerialNameForIndex:indexPath.row];
         } else {
             NSInteger lineNumber = 0;
             for (NSInteger i=0; i<indexPath.section; i++) {
                 lineNumber += [self.sectionDict[@(i)] integerValue];
             }
             [CNTransferInfo sharedCNTransferInfo].model = self.alertVM.serialList[indexPath.row + lineNumber - 1];
+            [CNTransferInfo sharedCNTransferInfo].serialId = self.alertVM.serialList[indexPath.row + lineNumber - 1].serialId;
+            [CNTransferInfo sharedCNTransferInfo].serialName = [self.alertVM getSerialNameForIndex:(indexPath.row + lineNumber - 1)];
         }
         
         [self presentViewController:navi animated:YES completion:nil];

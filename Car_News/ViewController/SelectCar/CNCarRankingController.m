@@ -9,6 +9,8 @@
 #import "CNCarRankingController.h"
 #import "CNCarRankingCell.h"
 #import "CNCarRankingViewModel.h"
+#import "CNCarSerialListWMPageViewController.h"
+#import "CNTransferInfo.h"
 
 #define kTag 100
 
@@ -158,6 +160,13 @@
     cell.numberLabel.text = [NSString stringWithFormat:@"%ld",row + 1];
     
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CNCarSerialListWMPageViewController *vc = [[CNCarSerialListWMPageViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    [CNTransferInfo sharedCNTransferInfo].serialName = [self.carRankingVM getCarNameForIndex:indexPath.row];
+    [CNTransferInfo sharedCNTransferInfo].serialId = self.carRankingVM.rankingList[indexPath.row].SerialId;
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 @end

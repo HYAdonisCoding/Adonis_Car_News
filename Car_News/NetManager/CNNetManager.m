@@ -174,13 +174,16 @@
 /** 用于请求车系视频数据 */
 + (void)getSerialVideoWithPage:(NSInteger)page andLength: (NSInteger)length completionHandler:(void (^)(CNSerialVideoModel *, NSError *))completionHandler {
     NSString *path = @"http://api.ycapp.yiche.com/video/getvideolistbyserialid";
-    NSInteger serialId = [CNTransferInfo sharedCNTransferInfo].model.serialId;
-    if (!serialId) {/** 热门车型 */
-        serialId = [CNTransferInfo sharedCNTransferInfo].data.serialId.integerValue;
-        if (!serialId) {/** 热门搜索 */
-            serialId = [CNTransferInfo sharedCNTransferInfo].dataModel.serialId.integerValue;
-        }
-    }
+    NSInteger serialId = [CNTransferInfo sharedCNTransferInfo].serialId;
+//    if (!serialId) {/** 热门车型 */
+//        serialId = [CNTransferInfo sharedCNTransferInfo].data.serialId.integerValue;
+//        if (!serialId) {/** 热门搜索 */
+//            serialId = [CNTransferInfo sharedCNTransferInfo].dataModel.serialId.integerValue;
+//            if (!serialId) {
+//                serialId = [CNTransferInfo sharedCNTransferInfo].serialId;
+//            }
+//        }
+//    }
     NSDictionary *params = @{@"serialid":@(serialId),@"page":@(page),@"length":@(length)};
     [self GET:path parameters:params progress:nil completionHandler:^(id reponseObj, NSError *error) {
         completionHandler([CNSerialVideoModel parseJSON:reponseObj], error);
@@ -189,13 +192,16 @@
 /** 用于请求车系文章数据 */
 + (void)getSerialArticleWithPage:(NSInteger)page andLength:(NSInteger)length completionHandler:(void (^)(CNArticleModel *, NSError *))completionHandler {
     NSString *path = @"http://api.ycapp.yiche.com/news/getnewslist";
-    NSInteger serialId = [CNTransferInfo sharedCNTransferInfo].model.serialId;
-    if (!serialId) {/** 热门车型 */
-        serialId = [CNTransferInfo sharedCNTransferInfo].data.serialId.integerValue;
-        if (!serialId) {/** 热门搜索 */
-            serialId = [CNTransferInfo sharedCNTransferInfo].dataModel.serialId.integerValue;
-        }
-    }
+    NSInteger serialId = [CNTransferInfo sharedCNTransferInfo].serialId;
+//    if (!serialId) {/** 热门车型 */
+//        serialId = [CNTransferInfo sharedCNTransferInfo].data.serialId.integerValue;
+//        if (!serialId) {/** 热门搜索 */
+//            serialId = [CNTransferInfo sharedCNTransferInfo].dataModel.serialId.integerValue;
+//            if (!serialId) {
+//                serialId = [CNTransferInfo sharedCNTransferInfo].serialId;
+//            }
+//        }
+//    }
     NSDictionary *params = @{@"serialid":@(serialId),@"pagesize":@(length),@"pageindex":@(page),@"categoryid":@8};
     [self GET:path parameters:params progress:nil completionHandler:^(id reponseObj, NSError *error) {
         completionHandler([CNArticleModel parseJSON:reponseObj], error);
@@ -215,11 +221,14 @@
     if (!sort) {
         sort = 0;
     }
-    NSInteger serialId = [CNTransferInfo sharedCNTransferInfo].model.serialId;
+    NSInteger serialId = [CNTransferInfo sharedCNTransferInfo].serialId;
     if (!serialId) {/** 热门车型 */
         serialId = [CNTransferInfo sharedCNTransferInfo].data.serialId.integerValue;
         if (!serialId) {/** 热门搜索 */
             serialId = [CNTransferInfo sharedCNTransferInfo].dataModel.serialId.integerValue;
+            if (!serialId) {
+                serialId = [CNTransferInfo sharedCNTransferInfo].serialId;
+            }
         }
     }
     NSDictionary *params = @{@"serialid":@(serialId),@"pagesize":@(length),@"pageindex":@(page),@"skip":@1,@"cityid":kCityId,@"sort":@(sort)};

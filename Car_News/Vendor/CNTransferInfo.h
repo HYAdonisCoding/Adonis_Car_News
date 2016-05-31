@@ -22,5 +22,9 @@ singleton_interface(CNTransferInfo)
 @property (nonatomic,strong) SelectCarHotSerialModel *data;
 /** 热门搜索 */
 @property (nonatomic,strong) CNHotSearchDataModel *dataModel;
+/** 车系 */
+@property (nonatomic,assign) NSInteger serialId;
+/** 车系名 */
+@property (nonatomic, copy) NSString *serialName;
 
 @end

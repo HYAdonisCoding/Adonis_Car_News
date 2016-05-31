@@ -9,6 +9,8 @@
 #import "CNNewCarViewController.h"
 #import "CNNewCarCell.h"
 #import "CNNewCarViewModel.h"
+#import "CNCarSerialListWMPageViewController.h"
+#import "CNTransferInfo.h"
 
 @interface CNNewCarViewController() <UITableViewDelegate, UITableViewDataSource>
 
@@ -42,6 +44,13 @@
 /** 表格可以自适应 */
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewAutomaticDimension;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CNCarSerialListWMPageViewController *vc = [[CNCarSerialListWMPageViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    [CNTransferInfo sharedCNTransferInfo].serialName = [self.carVM getCarNameForIndex:indexPath.row];
+    [CNTransferInfo sharedCNTransferInfo].serialId = self.carVM.carList[indexPath.row].csId;
+    [self presentViewController:navi animated:YES completion:nil];
 }
 #pragma mark -- Life Cycle
 - (void)viewDidLoad {
