@@ -154,7 +154,11 @@
     //MYLog(@"count:%ld",self.searchHistoryList.count);
     //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.tableView reloadData];
-    [self.tableView scrollToBottom];
+    /** 如果搜索历史大于9个，就滚动到底部 */
+    if (self.searchHistoryList.count > 9) {
+        [self.tableView scrollToBottom];
+    }
+    
 }
 /** 回车搜索 */
 - (IBAction)searchEnter:(UITextField *)sender {
