@@ -112,7 +112,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:path]];
     [vc.view addSubview:webView];
     [webView loadRequest:request];
-    vc.title = title;
+    vc.title = @"新闻详情";
     [webView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(0);
     }];

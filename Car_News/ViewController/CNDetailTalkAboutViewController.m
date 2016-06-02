@@ -50,10 +50,8 @@
         NSAttributedString *attributedStr = [NSAttributedString attributedStringWithAttachment:attachment];
         label.attributedText = attributedStr;
         
-    }else if([self.detailTalkAboutVM getDetailtalkAboutTextOrPictureForIndex:indexPath.row].length > 0){
-        label.text = [self.detailTalkAboutVM getDetailtalkAboutTextOrPictureForIndex:indexPath.row];
     } else {
-        return nil;
+        label.text = [self.detailTalkAboutVM getDetailtalkAboutTextOrPictureForIndex:indexPath.row];
     }
     return cell;
 }

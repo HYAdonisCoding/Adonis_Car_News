@@ -124,6 +124,9 @@
         }
         cell.textLabel.text = self.allProvinces[lineNumber + tmp].cityName;
     }
+    /** 选中后打对号 */
+    NSString *currentCity = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentCityName];
+    cell.accessoryType = [currentCity isEqualToString:cell.textLabel.text]? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     return cell;
 }
 /** 增加目录 */
@@ -144,8 +147,34 @@
                 modelList = @[self.cityListVM.cityList[i]];
             }
         }
+        /** 按下去高亮,松手后正常 */
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        /** 保存城市名称 */
+        [[NSUserDefaults standardUserDefaults] setObject:modelList[indexPath.row].cityName forKey:kCurrentCityName];
+        /** 保存城市Id */
+        [[NSUserDefaults standardUserDefaults] setObject:@(modelList[indexPath.row].cityId) forKey:kCurrentCityId];
+        /** 同步数据 */
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        /** 发送全局通知 */
+        [[NSNotificationCenter defaultCenter] postNotificationName:kCurrentCityChangedNotification object:nil];
+        /** 选中后打对号 */
+        [tableView reloadData];
+        return;
     } else if (indexPath.section == 1) {
         modelList = self.allCities[indexPath.row];
+        /** 按下去高亮,松手后正常 */
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        /** 保存城市名称 */
+        [[NSUserDefaults standardUserDefaults] setObject:self.allProvinces[indexPath.row].cityName forKey:kCurrentCityName];
+        /** 保存城市Id */
+        [[NSUserDefaults standardUserDefaults] setObject:@(self.allProvinces[indexPath.row].cityId) forKey:kCurrentCityId];
+        /** 同步数据 */
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        /** 发送全局通知 */
+        [[NSNotificationCenter defaultCenter] postNotificationName:kCurrentCityChangedNotification object:nil];
+        /** 选中后打对号 */
+        [tableView reloadData];
+        return;
     } else {
         NSInteger lineNumber = 0;
         for (NSInteger i=0; i<indexPath.section; i++) {
@@ -259,7 +288,10 @@
     //调用分类中的方法
     [self setupLocation];
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
 
 /** 黑魔法 */
 - (void)setLocationManager:(CLLocationManager *)locationManager {
