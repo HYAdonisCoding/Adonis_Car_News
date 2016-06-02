@@ -45,13 +45,15 @@
         NSInteger width = style.width;
         /** 使用Label的富文本显示图片 */
         NSTextAttachment *attachment = [NSTextAttachment new];
-        attachment.bounds = CGRectMake(0, 0, kScreenW - 40, (kScreenW - 40) * height / width);
+        attachment.bounds = CGRectMake(0, 0, kScreenW - 20, (kScreenW - 20) * height / width);
         attachment.image = imageView.image;
         NSAttributedString *attributedStr = [NSAttributedString attributedStringWithAttachment:attachment];
         label.attributedText = attributedStr;
         
-    }else {
+    }else if([self.detailTalkAboutVM getDetailtalkAboutTextOrPictureForIndex:indexPath.row].length > 0){
         label.text = [self.detailTalkAboutVM getDetailtalkAboutTextOrPictureForIndex:indexPath.row];
+    } else {
+        return nil;
     }
     return cell;
 }

@@ -22,7 +22,13 @@
 - (void)getDetailTalkAboutCarWithNewsListlistModel:(NewsListDataListModel *)modelIn categoryId:(NSInteger)categoryId completionHandler:(void (^)(NSError *))completoinHandler {
     [CNNetManager getDetailTalkAboutCarWithNewsID:modelIn.newsId categoryId:categoryId completionHandler:^(CNDetailTalkAboutModel *model, NSError *error) {
         if (!error) {
-            [self.dataList addObjectsFromArray: model.data.content];
+            //内容非空判断
+            for (int i=0; i<model.data.content.count; i++) {
+                if (![model.data.content[i].content  isEqualToString: @""]) {
+                    [self.dataList addObject:model.data.content[i]];
+                }
+            }
+            //[self.dataList addObjectsFromArray: model.data.content];
             //MYLog(@"%@",model.data.content);
         }
         completoinHandler(error);

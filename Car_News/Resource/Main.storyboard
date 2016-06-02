@@ -468,7 +468,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="t7X-dm-COd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -847,7 +847,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="83" id="m6H-r4-X5r">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="m6H-r4-X5r">
                                         <rect key="frame" x="0.0" y="28" width="320" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m6H-r4-X5r" id="lOP-GR-JJC">
@@ -855,7 +855,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Va-W5-K0g">
-                                                    <rect key="frame" x="20" y="10" width="280" height="62"/>
+                                                    <rect key="frame" x="10" y="10" width="300" height="62"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -864,8 +864,8 @@
                                             <constraints>
                                                 <constraint firstItem="4Va-W5-K0g" firstAttribute="top" secondItem="lOP-GR-JJC" secondAttribute="top" constant="10" id="Ldq-Et-uj5"/>
                                                 <constraint firstAttribute="bottom" secondItem="4Va-W5-K0g" secondAttribute="bottom" constant="10" id="aF0-XZ-9iL"/>
-                                                <constraint firstItem="4Va-W5-K0g" firstAttribute="leading" secondItem="lOP-GR-JJC" secondAttribute="leading" constant="20" id="dnf-bs-8gH"/>
-                                                <constraint firstAttribute="trailing" secondItem="4Va-W5-K0g" secondAttribute="trailing" constant="20" id="fAa-eu-W9J"/>
+                                                <constraint firstItem="4Va-W5-K0g" firstAttribute="leading" secondItem="lOP-GR-JJC" secondAttribute="leading" constant="10" id="dnf-bs-8gH"/>
+                                                <constraint firstAttribute="trailing" secondItem="4Va-W5-K0g" secondAttribute="trailing" constant="10" id="fAa-eu-W9J"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1266,14 +1266,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v5z-ay-aiY">
-                                                    <rect key="frame" x="20" y="5" width="280" height="185"/>
+                                                    <rect key="frame" x="10" y="5" width="300" height="185"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="v5z-ay-aiY" secondAttribute="bottom" constant="5" id="W90-5V-Gzn"/>
-                                                <constraint firstAttribute="trailing" secondItem="v5z-ay-aiY" secondAttribute="trailing" constant="20" id="akw-tu-BRZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="v5z-ay-aiY" secondAttribute="trailing" constant="10" id="akw-tu-BRZ"/>
                                                 <constraint firstItem="v5z-ay-aiY" firstAttribute="top" secondItem="vc2-cM-AFI" secondAttribute="top" constant="5" id="cYM-7I-nVi"/>
-                                                <constraint firstItem="v5z-ay-aiY" firstAttribute="leading" secondItem="vc2-cM-AFI" secondAttribute="leading" constant="20" id="oNG-61-VXf"/>
+                                                <constraint firstItem="v5z-ay-aiY" firstAttribute="leading" secondItem="vc2-cM-AFI" secondAttribute="leading" constant="10" id="oNG-61-VXf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
