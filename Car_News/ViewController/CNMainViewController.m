@@ -31,6 +31,8 @@
 @property (nonatomic,strong) CNMainViewModel *mainVM;
 /** 轮滑广告 */
 @property (nonatomic,strong) CNHeaderAdvertisementViewModel *headerAdVM;
+/** 数据库 */
+@property (nonatomic,strong) FMDatabase *database;
 
 @end
 
@@ -145,7 +147,34 @@
     scrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     [self.headerView addSubview:scrollView];
 }
-
+#pragma mark -- Data Base
+/** 创建数据库和表 */
+- (void)createDataBase {
+    [self.database open];
+    BOOL isASuccess = [self.database executeUpdate:@"create table if not exists NewsInfo (id integer primary key, title text, picCover text, commentCount integer, scr text, mp4Link text, filePath text, videoId integer, newsId integer, type integer)"];
+    if (!isASuccess) {
+        MYLog(@"创建表失败：%@",self.database.lastError);
+    }
+    [self.database close];
+}
+/** 插入数据 */
+- (void)insertData {
+    
+}
+/** 删除数据 */
+- (void)deleteData {
+    [self.database open];
+    [self.database executeUpdate:@"DELETE FROM NewsInfo"];
+    [self.database close];
+}
+/** 查询数据 */
+- (void)selectData {
+    
+}
+/** 更新数据 */
+- (void)updateData {
+    
+}
 #pragma mark -- Life Cycle 生命周期
 - (void)viewDidLoad{
     [super viewDidLoad];

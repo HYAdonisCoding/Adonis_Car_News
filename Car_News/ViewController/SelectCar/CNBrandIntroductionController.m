@@ -48,6 +48,8 @@
     self.tableView.estimatedRowHeight = 70;
     // 2.设置tableView的实际行高要根据自动布局产生的高度决定
     self.tableView.rowHeight = UITableViewAutomaticDimension;;
+    //取消没有数据单元格的横线
+    self.tableView.tableFooterView = [[UIView alloc]init];
 }
 #pragma mark -- UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

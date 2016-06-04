@@ -11,10 +11,10 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
 #import <AFNetworking.h>
 #import <UIKit+AFNetworking.h>
 #import <Masonry.h>
+#import <FMDB.h>
 /** masonry中拷贝的 */
 #define equalTo(...)                     mas_equalTo(__VA_ARGS__)
 #define greaterThanOrEqualTo(...)        mas_greaterThanOrEqualTo(__VA_ARGS__)
