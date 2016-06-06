@@ -67,6 +67,22 @@
     }
     return _mainVM;
 }
+- (FMDatabase *)database {
+    if (!_database) {
+        //1.创建数据库
+        NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+        NSString *dbPath = [documentPath stringByAppendingPathComponent:@"VehiclePressInfo.db"];
+//        NSFileManager *fm = [NSFileManager defaultManager];
+//        if (![fm fileExistsAtPath:dbPath]) {
+            //仅仅是创建数据库文件，并没有打开
+            _database = [FMDatabase databaseWithPath:dbPath];
+//        } else {
+//            
+//        }
+        
+    }
+    return _database;
+}
 #pragma mark -- UITableView Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.headerAdVM.advertisementNumber.count - 4;
@@ -77,7 +93,7 @@
     cell.titleLabel.text = [self.headerAdVM advertisementTitleForIndex:row];
     cell.commentNumberLabel.text = [self.headerAdVM advertisementCommentNumberForIndex:row];
     cell.mediaNameLabel.text = [self.headerAdVM advertisementMediaNameForIndex:row];
-    [cell.iconImageView sd_setImageWithURL:[NSURL URLWithString:[self.headerAdVM advertisementIconForIndex:row]] placeholderImage:[UIImage imageNamed:@"defalut_background1"]];
+    [cell.iconImageView sd_setImageWithURL:[self.headerAdVM advertisementIconForIndex:row]];// placeholderImage:[UIImage imageNamed:@"defalut_background1"]];
     
     /** 去掉Cell的左侧空隙 */
     cell.separatorInset = UIEdgeInsetsZero;
@@ -159,60 +175,104 @@
 }
 /** 插入数据 */
 - (void)insertData {
-    
+    if ([self.database open]) {
+        for (int i = 0 ; i < self.headerAdVM.advertisementNumber.count; i++) {
+            BOOL isSuccess = [self.database executeUpdate:[NSString stringWithFormat:@"insert into NewsInfo (title, picCover, commentCount, scr, mp4Link, filePath, videoId, newsId, type) values ('%@','%@','%ld','%@','%@','%@','%ld','%ld','%ld')",self.headerAdVM.advertisementNumber[i].title, self.headerAdVM.advertisementNumber[i].picCover, self.headerAdVM.advertisementNumber[i].commentCount, self.headerAdVM.advertisementNumber[i].src, self.headerAdVM.advertisementNumber[i].mp4Link, self.headerAdVM.advertisementNumber[i].filePath, self.headerAdVM.advertisementNumber[i].videoId, self.headerAdVM.advertisementNumber[i].newsId, self.headerAdVM.advertisementNumber[i].type]];
+            if (!isSuccess) {
+                MYLog(@"插入数据失败:%@",self.database.lastError);
+            }
+        }
+    }
+    [self.database close];
 }
 /** 删除数据 */
 - (void)deleteData {
     [self.database open];
-    [self.database executeUpdate:@"DELETE FROM NewsInfo"];
+    [self.database executeUpdate:@"delete from NewsInfo"];
     [self.database close];
 }
 /** 查询数据 */
 - (void)selectData {
-    
+    if ([self.database open]) {
+        FMResultSet *resultSet = [self.database executeQuery:@"select * from NewsInfo"];
+        while ([resultSet next]) {
+            /** 从记录中获取每个字段（根据不同的字段类型选择不同的方法） */
+            NewsAdvertisementDataListModel *model = [NewsAdvertisementDataListModel new];
+            model.title = [resultSet stringForColumn:@"title"];
+            model.commentCount = [resultSet intForColumn:@"commentCount"];
+            model.src = [resultSet stringForColumn:@"scr"];
+            model.mp4Link = [resultSet stringForColumn:@"mp4Link"];
+            model.filePath = [resultSet stringForColumn:@"filePath"];
+            model.videoId = [resultSet intForColumn:@"videoId"];
+            model.newsId = [resultSet intForColumn:@"newsId"];
+            model.type = [resultSet intForColumn:@"type"];
+            model.picCover = [resultSet stringForColumn:@"picCover"];
+            [self.headerAdVM.advertisementNumber addObject:model];
+        }
+    }
 }
-/** 更新数据 */
+/** 更新数据(未使用) */
 - (void)updateData {
-    
+    if ([self.database open]) {
+        BOOL isSuccess = [self.database executeUpdate:@"update NewsInfo set type='' where id=2"];
+        if (!isSuccess) {
+            MYLog(@"更改数据失败:%@",self.database.lastError);
+        }
+    }
 }
 #pragma mark -- Life Cycle 生命周期
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
+    [self selectData];
+    BOOL result = self.headerAdVM.advertisementNumber.count > 0;
+    if (result) {
+        MYLog(@"NewsInfo已经存在.");
+        [self setupAdvertisementView];
+    } else {
+        [self createDataBase];
+    }
     [self.tableView addHeaderRefresh:^{
-        [self.mainVM getNewsWithRequestMode:RequestModeRefresh completionHandler:^(NSError *error) {
-            if (error) {
-                [self.view showWarning:error.localizedDescription];
-            }else{
-                [self.tableView reloadData];
-            }
-            [self.tableView endHeaderRefresh];
-        }];
+//        [self.mainVM getNewsWithRequestMode:RequestModeRefresh completionHandler:^(NSError *error) {
+//            if (error) {
+//                [self.view showWarning:error.localizedDescription];
+//            }else{
+//                [self.tableView reloadData];
+//                [self deleteData];
+//                [self insertData];
+//            }
+//            [self.tableView endHeaderRefresh];
+//        }];
         [self.headerAdVM getNewsAdvertisementDataListWithRequestMode:RequestModeRefresh completionHandler:^(NSError *error ,id resObject) {
             if (error) {
                 [self.view showWarning:error.localizedDescription];
             } else {
                 [self.tableView reloadData];
                 [self setupAdvertisementView];
+                [self deleteData];
+                [self insertData];
             }
             [self.tableView endHeaderRefresh];
         }];
     }];
     [self.tableView beginHeaderRefresh];
     [self.tableView addBackFooterRefresh:^{
-        [self.mainVM getNewsWithRequestMode:RequestModeMore completionHandler:^(NSError *error) {
-            if (error) {
-                [self.view showWarning:error.localizedDescription];
-            }else{
-                [self.tableView reloadData];
-            }
-            [self.tableView endFooterRefresh];
-        }];
+//        [self.mainVM getNewsWithRequestMode:RequestModeMore completionHandler:^(NSError *error) {
+//            if (error) {
+//                [self.view showWarning:error.localizedDescription];
+//            }else{
+//                [self.tableView reloadData];
+//                [self deleteData];
+//                [self insertData];
+//            }
+//            [self.tableView endFooterRefresh];
+//        }];
         [self.headerAdVM getNewsAdvertisementDataListWithRequestMode:RequestModeMore completionHandler:^(NSError *error,id resObject) {
             if (error) {
                 [self.view showWarning:error.localizedDescription];
             } else {
                 [self.tableView reloadData];
+                [self deleteData];
+                [self insertData];
             }
             [self.tableView endFooterRefresh];
         }];

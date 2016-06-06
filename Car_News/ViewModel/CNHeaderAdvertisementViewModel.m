@@ -9,8 +9,8 @@
 #import "CNHeaderAdvertisementViewModel.h"
 
 @implementation CNHeaderAdvertisementViewModel
-- (NSString *)advertisementIconForIndex:(NSInteger)index {
-    return self.advertisementNumber[index].picCover;
+- (NSURL *)advertisementIconForIndex:(NSInteger)index {
+    return [NSURL URLWithString:self.advertisementNumber[index].picCover];
 }
 - (NSString *)advertisementTitleForIndex:(NSInteger)index {
     return self.advertisementNumber[index].title;

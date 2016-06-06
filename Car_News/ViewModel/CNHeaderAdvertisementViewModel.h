@@ -16,7 +16,7 @@
 
 @interface CNHeaderAdvertisementViewModel : NSObject
 /** 根据UI */
-- (NSString *)advertisementIconForIndex: (NSInteger)index;
+- (NSURL *)advertisementIconForIndex: (NSInteger)index;
 - (NSString *)advertisementTitleForIndex: (NSInteger)index;
 - (NSString *)advertisementMediaNameForIndex: (NSInteger)index;
 - (NSString *)advertisementCommentNumberForIndex: (NSInteger)index;
