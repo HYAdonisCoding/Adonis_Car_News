@@ -22,7 +22,7 @@
     return self.newsList[index].mediaName;
 }
 - (NSString *)commentNumberForIndex:(NSInteger)index{
-    return [NSString stringWithFormat:@"评论:%ld",self.newsList[index].commentCount];
+    return [NSString stringWithFormat:@"%ld",self.newsList[index].commentCount];
 }
 - (NSInteger)newsIDForIndex:(NSInteger)index{
     return self.newsList[index].newsId;

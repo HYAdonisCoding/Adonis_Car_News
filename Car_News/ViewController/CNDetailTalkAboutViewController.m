@@ -40,17 +40,19 @@
         UIImageView *imageView = [[UIImageView alloc] init];
         [imageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"defalut_background8"]];
         //原始图片的宽高
-        CNDetailTalkAboutDataContentStyleModel * style = self.detailTalkAboutVM.dataList[indexPath.row].style.firstObject;
+        CNDetailTalkAboutDataContentStyleModel *style = self.detailTalkAboutVM.dataList[indexPath.row].style.firstObject;
         NSInteger height = style.height;
         NSInteger width = style.width;
         /** 使用Label的富文本显示图片 */
         NSTextAttachment *attachment = [NSTextAttachment new];
-        attachment.bounds = CGRectMake(0, 0, kScreenW - 20, (kScreenW - 20) * height / width);
-        attachment.image = imageView.image;
+        attachment.bounds = CGRectMake(0, 0, kScreenW - 20, width ? (kScreenW - 20) * height / width : height);
+        imageView.frame = attachment.bounds;
         NSAttributedString *attributedStr = [NSAttributedString attributedStringWithAttachment:attachment];
         label.attributedText = attributedStr;
+        [label addSubview:imageView];
         
     } else {
+        [label removeAllSubviews];
         label.text = [self.detailTalkAboutVM getDetailtalkAboutTextOrPictureForIndex:indexPath.row];
     }
     return cell;

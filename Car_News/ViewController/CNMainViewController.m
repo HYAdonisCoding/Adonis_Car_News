@@ -11,6 +11,7 @@
 #import "CNNewsCell.h"
 #import "CNMainViewModel.h"
 #import "CNDetailNewsViewController.h"
+#import "CNDetailTalkAboutViewController.h"
 #import "CNHeaderAdvertisementViewModel.h"
 #import <SDCycleScrollView.h>
 #import "UILabel+Auto.h"
@@ -72,14 +73,9 @@
         //1.创建数据库
         NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
         NSString *dbPath = [documentPath stringByAppendingPathComponent:@"VehiclePressInfo.db"];
-//        NSFileManager *fm = [NSFileManager defaultManager];
-//        if (![fm fileExistsAtPath:dbPath]) {
-            //仅仅是创建数据库文件，并没有打开
-            _database = [FMDatabase databaseWithPath:dbPath];
-//        } else {
-//            
-//        }
-        
+        //仅仅是创建数据库文件，并没有打开
+        _database = [FMDatabase databaseWithPath:dbPath];
+        [_database open];
     }
     return _database;
 }
@@ -120,8 +116,7 @@
     /** 数据 */
     detailNewsVC.model = model;
     /** 推出新闻详情详情 */
-    [self.navigationController pushViewController:detailNewsVC animated:YES];
-    
+    [self.navigationController pushViewController:detailNewsVC animated:YES];    
 }
 #pragma mark -- Methods 方法
 - (void)playMovieWithPath: (NSString *)path andTitle: (NSString *)title {

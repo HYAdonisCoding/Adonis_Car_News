@@ -108,6 +108,10 @@
 
 @property (nonatomic, assign) NSInteger posEnd;
 
+@property (nonatomic, assign) NSInteger height;
+
+@property (nonatomic, assign) NSInteger width;
+
 @property (nonatomic, strong) NSArray<NSNumber *> *fontStyle;
 
 @end
