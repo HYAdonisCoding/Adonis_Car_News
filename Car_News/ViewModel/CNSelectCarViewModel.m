@@ -97,6 +97,7 @@
 - (void)getCarslistCompetionHandler:(void (^)(NSError *))completionHandler {
     [CNNetManager getCarsListCompletionHandler:^(CNCarsListModel *model, NSError *error) {
         if (!error) {
+            [self.carsList removeAllObjects];
             [self.carsList addObjectsFromArray:model.data];
         }
         completionHandler(error);

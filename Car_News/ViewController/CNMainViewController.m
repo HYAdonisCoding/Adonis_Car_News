@@ -182,8 +182,12 @@
 }
 /** 删除数据 */
 - (void)deleteData {
-    [self.database open];
-    [self.database executeUpdate:@"delete from NewsInfo"];
+    if ([self.database open]) {
+        BOOL isSuccess = [self.database executeUpdate:@"delete from NewsInfo"];
+        if (!isSuccess) {
+            MYLog(@"删除数据失败:%@",self.database.lastError);
+        }
+    }
     [self.database close];
 }
 /** 查询数据 */
@@ -205,6 +209,7 @@
             [self.headerAdVM.advertisementNumber addObject:model];
         }
     }
+    [self.database close];
 }
 /** 更新数据(未使用) */
 - (void)updateData {

@@ -22,7 +22,13 @@
 - (void)getArticleContentWithNewsId:(NSInteger)newsId LastModify:(NSString *)lastModify completionHandler:(void (^)(NSError *))completionHandler {
     [CNNetManager getSerialArticleContentWithNewsId:newsId lastModify:lastModify completionHandler:^(CNArticleContentModel *model, NSError *error) {
         if (!error) {
-            [self.contentList addObjectsFromArray:model.data.content];
+            /** 过滤空的内容 */
+            for (int i=0; i<model.data.content.count; i++) {
+                if (![model.data.content[i].content  isEqualToString: @""]) {
+                    [self.contentList addObject:model.data.content[i]];
+                }
+            }
+            //[self.contentList addObjectsFromArray:model.data.content];
         }
         completionHandler(error);
     }];
