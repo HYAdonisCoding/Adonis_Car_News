@@ -1738,10 +1738,10 @@
 			children = (
 				BBDA516C1CD7062900661FD2 /* CNMainWMPageViewController.h */,
 				BBDA516D1CD7062900661FD2 /* CNMainWMPageViewController.m */,
-				BBEB34501CC10ECD0023EE66 /* CNDetailNewsViewController.h */,
-				BBEB34511CC10ECD0023EE66 /* CNDetailNewsViewController.m */,
 				BBEB34521CC10ECD0023EE66 /* CNMainViewController.h */,
 				BBEB34531CC10ECD0023EE66 /* CNMainViewController.m */,
+				BBEB34501CC10ECD0023EE66 /* CNDetailNewsViewController.h */,
+				BBEB34511CC10ECD0023EE66 /* CNDetailNewsViewController.m */,
 				BBDA51701CD708E700661FD2 /* CNAlbumViewController.h */,
 				BBDA51711CD708E700661FD2 /* CNAlbumViewController.m */,
 				BBDA517C1CD72F7300661FD2 /* CNDetailAlbumViewController.h */,

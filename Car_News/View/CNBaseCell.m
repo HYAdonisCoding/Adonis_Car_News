@@ -67,7 +67,14 @@
     if (!_commentCountLabel) {
         _commentCountLabel = [UILabel labelWithFrame:CGRectZero];
         _commentCountLabel.textColor = [UIColor darkGrayColor];
+        UIImageView *iconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tabbar_1_H"]];
         [self addSubview:_commentCountLabel];
+        [self addSubview:iconImageView];
+        [iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(_commentCountLabel.mas_left).offset(-8);
+            make.bottom.equalTo(-10);
+            make.size.equalTo(CGSizeMake(20, 20));
+        }];
         [_commentCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(-10);
             //make.height.equalTo(20);

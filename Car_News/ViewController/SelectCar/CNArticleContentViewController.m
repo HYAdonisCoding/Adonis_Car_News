@@ -57,10 +57,13 @@
         /** 使用Label的富文本显示图片 */
         NSTextAttachment *attachment = [NSTextAttachment new];
         attachment.bounds = CGRectMake(0, 0, kScreenW - 20, (kScreenW - 20) * height / width);
-        attachment.image = imageView.image;
+//        attachment.image = imageView.image;
+        imageView.frame = attachment.bounds;
         NSAttributedString *attributedStr = [NSAttributedString attributedStringWithAttachment:attachment];
         cell.label.attributedText = attributedStr;
+        [cell.label addSubview:imageView];
     } else {
+        [cell.label removeAllSubviews];
         cell.label.text = [self.articleContentVM getArticleContentTextAndURLForIndex:indexPath.row];
     }
     return cell;
