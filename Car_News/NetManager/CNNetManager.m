@@ -135,6 +135,7 @@
     NSDictionary *params = @{@"newsId":@(ID)};
     NSString *path = [DPRequest serializeURL:detailNews params:params];
     [self GET:path parameters:nil progress:nil completionHandler:^(id reponseObj, NSError *error) {
+        MYLog(@"%@-------------------\n%@",reponseObj,[DetailNewsDataModel parseJSON:reponseObj[@"data"]]);
         completionHandler([DetailNewsDataModel parseJSON:reponseObj[@"data"]],error);
     }];
 }

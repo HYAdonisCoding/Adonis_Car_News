@@ -9,15 +9,19 @@
 #import "CNCarVideoModel.h"
 
 @implementation CNCarVideoModel
+
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"data":[CNCarVideoDataModel class]};
 }
 
 @end
+
 @implementation CNCarVideoDataModel
+
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"list":[CNCarVideoDataListModel class]};
 }
+
 @end
 
 

@@ -13,6 +13,7 @@
     return @{@"data":[NewsListDataModel class]};
 }
 @end
+
 @implementation NewsListDataModel
 + (NSDictionary *)modelContainerPropertyGenericClass{
     return @{@"list":[NewsListDataListModel class]};

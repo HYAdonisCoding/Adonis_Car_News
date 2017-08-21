@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class CNCarVideoDataModel,CNCarVideoDataListModel;
+
 @interface CNCarVideoModel : NSObject
 
 @property (nonatomic, assign) NSInteger status;

@@ -232,16 +232,7 @@
         [self createDataBase];
     }
     [self.tableView addHeaderRefresh:^{
-//        [self.mainVM getNewsWithRequestMode:RequestModeRefresh completionHandler:^(NSError *error) {
-//            if (error) {
-//                [self.view showWarning:error.localizedDescription];
-//            }else{
-//                [self.tableView reloadData];
-//                [self deleteData];
-//                [self insertData];
-//            }
-//            [self.tableView endHeaderRefresh];
-//        }];
+        
         [self.headerAdVM getNewsAdvertisementDataListWithRequestMode:RequestModeRefresh completionHandler:^(NSError *error ,id resObject) {
             if (error) {
                 [self.view showWarning:error.localizedDescription];
